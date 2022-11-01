@@ -1,0 +1,203 @@
+*{
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #0f0f0f;
+}
+
+.kotaknav{
+    background-color: #0f0f0f;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+}
+
+.kotaklogo{
+    display: flex;
+    justify-content: space-around;
+    width: 177px;
+}
+
+.kotaklogo a{
+    text-align: center;
+}
+
+.kotaklogo img{
+    width: 100%;
+}
+
+.kotakbar{
+    align-items: center;
+    display: none;
+}
+
+.kotakbar a{
+    text-decoration: none;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#nav.bar1{
+    display: none;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav{
+    align-items: center;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.nav a{
+    text-decoration: none;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nav a:hover{
+    border-bottom: 5px solid white;
+}
+
+.nav a.icon{
+    text-decoration: none;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.searchbar{
+    align-items: center;
+    display: flex;
+}
+
+.searchbar input{
+    width: 100%;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: white;
+    color: #0f0f0f;
+}
+
+.searchbar :hover{
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.searchbar :focus{
+    border-radius: none;
+}
+
+.login{
+    display: flex;
+}
+
+.login{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.login a{
+    padding: 15px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content1{
+    justify-content: center;
+    align-items: center;
+    padding: 20px 55px;
+}
+
+.content2{
+    width: 100%;
+    color: white;
+    justify-content: center;
+    padding: 20px 60px;
+    font-size: 30px;
+}
+
+.content3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 35px;
+}
+
+.gambar1{
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    padding: 5px 15px;
+}
+
+.footer-basic {
+    padding: 40px 0;
+    color: white;
+    position: relative;
+}
+
+.satu-footer-basic{
+    margin-top: 530px;
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+}
+
+.footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+    #nav{ display: block;}
+    #login{ display: block;}    
+    .nav { display: none;}
+    .nav {position: relative;}
+    .login {display: none;}
+    .login {position: relative;}
+    .kotaklogo {max-width: 100%;}
+    .kotaklogo img {width: 50%;}
+    .kotakbar {display: flex;}
+}
