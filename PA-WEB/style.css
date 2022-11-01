@@ -124,6 +124,10 @@ body{
     text-decoration: none;
 }
 
+.login :hover{
+    opacity: 0.8;
+}
+
 .namabrand{
     color: var(--warna-tulisan);
     justify-content: center;
