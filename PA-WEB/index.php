@@ -18,7 +18,7 @@
             </div>
             <div class="nav">
                 <a href="#">Home</a>
-                <a href="#">About Us</a>
+                <a href="#">About us</a>
                 <a href="#">Contact</a>
             </div>
             <div class="searchbar">
@@ -42,12 +42,26 @@
             <a href="#">Login</a>
         </div>
 
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+
         <div class="content1">
             <a><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_1423,c_limit/f8249ddf-b234-43b3-8063-6bdd58dc6e0c/nike-just-do-it.jpg" width="100%"></a>
         </div>
+        <div class="namabrand">
+            EKIN
+        </div>
+        <div class="namabrand1">
+            - World's Leading Website For Your Fashion Needs -
+        </div>
         <br>
         <br>
-        <p></p>
+        <br>
+        <br>
         <div class="content2">
             Available Reviews From us
         </div>
