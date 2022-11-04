@@ -1,0 +1,523 @@
+*{
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--warna-bg);
+}
+
+.kotaknav{
+    background-color: black;
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.kotaklogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 105px;
+}
+
+.kotaklogo a{
+    text-align: center;
+}
+
+.kotaklogo img{
+    width: 100%;
+}
+
+.kotakbar{
+    align-items: center;
+    display: none;
+}
+
+.kotakbar a{
+    text-decoration: none;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#nav.bar1{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    color: var(--warna-tulisan);
+}
+
+.nav{
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.nav a{
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.nav a:hover{
+    border-bottom: 5px solid white;
+}
+
+.nav a.icon{
+    text-decoration: none;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.searchbar{
+    align-items: center;
+    display: flex;
+}
+
+.searchbar input{
+    width: 100%;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+.searchbar :hover{
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.searchbar :focus{
+    border-radius: none;
+}
+
+.login{
+    color: white;
+    display: flex;
+    background-color: black;
+    font-weight: bold;
+    border: 0;
+}
+
+.login:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.login{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login a{
+    padding: 10px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login :hover{
+    opacity: 0.8;
+}
+
+.form-log{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-log input{
+    width: 100%;
+    color: black;
+}
+
+.form-input{
+    width: 100%;
+    max-width: 330px;
+    padding: 30px 30px;
+    padding-bottom: 40px;
+    background-color: #0f0f0f;
+    border: 5px solid white;
+}
+
+.form-tombol{
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-header{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.tombol{
+    width: 100%;
+    background-color: white;
+    color: red;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombol1{
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tombol:hover{
+    opacity: 0.7;
+}
+
+.tombol1:hover{
+    opacity: 0.7;
+}
+
+.nightmode{
+    display: flex;
+}
+
+.nightmode{
+    align-items: center;
+    justify-content: space-around;
+    width: 5%;
+}
+
+.nightmode1{
+    display: none;
+}
+
+.nightmode1{
+    align-items: center;
+    justify-content: space-around;
+    width: 5%;
+}
+
+.content1{
+    width: 100%;
+    object-fit: contain;
+    padding-top: 1.5%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.content2{
+    width: 100%;
+    color: var(--warna-tulisan);
+    justify-content: center;
+    padding: 10px 40px;
+    font-size: 30px;
+}
+
+.content3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 35px;
+}
+
+.kotakfilo{
+    width: 100%;
+    color: var(--warna-tulisan);
+    text-align: center;
+    padding: 10px 60px;
+    font-size: 40px;
+}
+
+.kotaksign{
+    width: 100%;
+    padding: 20%;
+    padding-bottom: 50px;
+    padding-top: 6px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutus{
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 50px; 
+}
+
+.gambar1{
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    padding: 5px 5px;
+}
+
+.gambar1:hover{
+    opacity: 0.7;
+}
+
+.footer-basic {
+    padding: 40px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+}   
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+}
+
+.footer-basic .copyright {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    width: 60px;
+    right: 30px;
+    z-index: 9;
+}
+  
+.theme-switch input {
+    display:none;
+}
+  
+.slider {
+    background-color: white;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+  
+.slider:before {
+    background-color: black;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+  
+input:checked + .slider{
+    background-color: white;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-switch-wrapper1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.theme-switch1 {
+    display: inline-block;
+    height: 34px;
+    width: 60px;
+    right: 30px;
+    z-index: 9;
+}
+  
+.theme-switch1 input {
+    display:none;
+}
+  
+.slider1 {
+    background-color: white;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+  
+.slider1:before {
+    background-color: black;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+  
+input:checked + .slider1{
+    background-color: white;
+}
+  
+input:checked + .slider1:before {
+    transform: translateX(26px);
+}
+  
+.slider1.round1 {
+    border-radius: 34px;
+}
+  
+.slider1.round1:before {
+    border-radius: 50%;
+}
+
+:root{
+    --warna-tulisan : white;
+    --warna-bg : #0f0f0f;
+    --copyright : #aaa;
+}
+
+[data-theme="light"] {
+    --warna-tulisan : black;
+    --warna-bg : white;
+    --copyright : white;
+}
+
+@media screen and (max-width: 760px) {
+    .content2{font-size: 20px;}
+    .kotakfilo{font-size: 20px;}
+    #login{ display: block;}    
+    .nav { display: none;}
+    .nightmode {display: none;}
+    .nightmode1 {display: flex;}
+    .responsive {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        top: 63px;
+        flex-direction: column;
+        position: absolute;
+        padding: 5px;
+    }
+    .login {display: none;}
+    .login {position: relative;}
+    .kotaklogo {max-width: 100%;}
+    .kotaklogo img {width: 50%;}
+    .kotakbar {display: flex;}
+}
+
+@media screen and (max-width: 460px) {
+    .content1{padding-top: 14%;}
+    .content2{font-size: 16px;}
+    .kotakfilo{font-size: 16px;}
+    .nav { display: none;}
+    .nightmode {display: none;}
+    .nightmode1 {display: flex;}
+    .responsive {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        top:63px;
+        flex-direction: column;
+        position: absolute;
+        padding: 5px;
+    }
+    .login {display: none;}
+    .login {position: relative;}
+    .kotaklogo {max-width: 100%;}
+    .kotaklogo img {width: 50%;}
+    .kotakbar {display: flex;}
+}
+
+@media screen and (max-width: 345px) {
+    .content1{padding-top: 20%;}
+    .content2{font-size: 20px;}
+    .kotakfilo{font-size: 20px;}    
+    .nav { display: none;}
+    .nightmode {display: none;}
+    .nightmode1 {display: flex;}
+    .responsive {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        top:100px;
+        flex-direction: column;
+        position: absolute;
+        padding: 5px;
+    }
+    .login {display: none;}
+    .login {position: relative;}
+    .kotaklogo {max-width: 100%;}
+    .kotaklogo img {width: 50%;}
+    .kotakbar {display: flex;}
+}
