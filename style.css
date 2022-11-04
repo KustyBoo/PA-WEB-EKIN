@@ -103,6 +103,80 @@ body{
     justify-content: space-around;
 }
 
+.contactus{
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("bgacc.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.contactus .isicontact{
+    max-width: 500px;
+    text-align: center;
+}
+
+.contactus .isicontact h2{
+    font-size: 40px;
+    font-weight: 450;
+    color: var(--warna-tulisan);
+}
+
+.contactus .isicontact p{
+    font-size: 25px;
+    font-weight: 250;
+    color: var(--warna-tulisan);
+}
+
+.containercontact{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+}
+
+.containercontact .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.containercontact .contactInfo .box{
+    position: relative;
+    padding: 25px 0;
+    display: flex;
+}
+
+.containercontact .contactInfo .box .icon{
+    height: 50px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.containercontact .contactInfo .box .text{
+    margin-left: 20px;
+    font-size: 15px;
+    color: var(--warna-tulisan);
+    display: flex;
+    flex-direction: column;
+    font-weight: 250;
+}
+
+.containercontact .contactInfo .box .text h3{
+    color: var(--warna-tulisan);
+    font-weight: 300;
+}
+
 #nav.bar1{
     display: none;
 }
