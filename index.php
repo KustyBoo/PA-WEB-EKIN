@@ -75,6 +75,18 @@
         <div class="kotaksign">
             <a href="register.php"><img src="signup.png" width="100%"></a>
         </div>
+        <section id = "aboutus" class = "kotakabout">
+            <div class="isiabout">
+                <img src="logo_web.png">
+                <div class = "textabout">
+                    <h1>About Us</h1>
+                    <h3>EKIN</h3>
+                    <p>EKIN is a website that works for you shoe enthusiasts who are always curious about the latest shoe information 
+                    that is booming in the fashion world and the market. With ekin, we hope that all of you can receive interesting 
+                    information every day related to the world of shoes.
+                </div>
+            </div>
+        </section>
         <div class="footer-basic satu-footer-basic">
             <footer>
                 <ul class="list-inline">
