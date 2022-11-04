@@ -42,15 +42,6 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 toggleSwitch1.addEventListener('change', switchTheme, false);
 
-// pop-up login
-function poplogin(){
-    document.getElementById("log-form").style.display = "flex";
-}
-
-function clslogin(){
-    document.getElementById("log-form").style.display = "none";
-}
-
 // save posisi scroll refresh
 document.addEventListener("DOMContentLoaded", function (event) {
     var scrollpos = localStorage.getItem("scrollpos");
