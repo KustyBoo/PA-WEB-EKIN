@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <link rel = "icon" href = "logo_web.png">
         <link rel="stylesheet" href="style.css">
@@ -35,7 +34,7 @@
                 </form>
             </div>
             <div class="login">
-                <button class="login" onclick="poplogin()">LOGIN</button>
+                <a href="login.php" class="login">LOGIN</a>
             </div>
             <div class="nightmode">
                 <div class="theme-switch-wrapper">
@@ -50,29 +49,6 @@
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-        </div>
-        <div class="form-log" id="log-form">
-            <form class="form-input" action="" method="POST">  
-                <div class="form-header">
-                    <h2>LOGIN</h2>
-                </div>
-                <div class="form-tombol">
-                    <label for="username"><b>USERNAME</b></label>
-                    <br>
-                    <input type="text" placeholder="Username" name="username">
-                </div>
-                <div class="form-tombol">
-                    <label for="password"><b>PASSWORD</b></label>
-                    <br>
-                    <input type="password" placeholder="Password">
-                </div>
-
-                <br>
-                <div class="form-tombol">
-                    <button type="submit" class="tombol1">LOGIN</button>
-                    <button class="tombol" onclick="clslogin()">CLOSE</button>
-                </div>
-            </form> 
         </div>
         <div class="content1">
             <a href="#"><img src="konten3.png" width="100%" height="50%" id="gambarkonten"></a>
@@ -97,7 +73,7 @@
             Wanna See More?
         </div>
         <div class="kotaksign">
-            <a href="#"><img src="signup.png" width="100%"></a>
+            <a href="register.php"><img src="signup.png" width="100%"></a>
         </div>
         <div class="footer-basic satu-footer-basic">
             <footer>
