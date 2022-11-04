@@ -50,6 +50,59 @@ body{
     font-size: 25px;
 }
 
+.kotakabout{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kotakabout .isiabout img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+
+.textabout{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.textabout h1{
+    color: white;
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.textabout h5{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.text p{
+    color: white;
+    line-height: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.isiabout{
+    width: 1280px;
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
 #nav.bar1{
     display: none;
 }
