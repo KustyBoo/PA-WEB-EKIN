@@ -87,6 +87,38 @@
                 </div>
             </div>
         </section>
+        <section class = "contactus" id="contact">
+            <div class = "isicontact">
+                <h2>Contact Us</h2>
+                <p>Thank you for visiting our website. You can interact with us via:</p>
+            </div>
+            <div class = "containercontact">
+                <div class = "contactInfo">
+                    <div class = "box">
+                        <div class = "icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class = "text">
+                            <h3>Address</h3>
+                            <p>Ahmad Yani Street No. 55, East Jakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class = "box">
+                        <div class = "icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class = "text">
+                            <h3>Phone</h3>
+                            <p>0541-2234045</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class = "box">
+                        <div class = "icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class = "text">
+                            <h3>Email</h3>
+                            <p>wearekin@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="footer-basic satu-footer-basic">
             <footer>
                 <ul class="list-inline">
