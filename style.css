@@ -527,6 +527,11 @@ input:checked + .slider1:before {
     .kotaklogo {max-width: 100%;}
     .kotaklogo img {width: 50%;}
     .kotakbar {display: flex;}
+    .kotakabout{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -550,6 +555,14 @@ input:checked + .slider1:before {
     .kotaklogo {max-width: 100%;}
     .kotaklogo img {width: 50%;}
     .kotakbar {display: flex;}
+    .kotakabout .isiabout img{
+        margin-bottom: 35px;
+        width: 50%;
+    }
+    .text h1{
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
 }
 
 @media screen and (max-width: 345px) {
@@ -573,4 +586,12 @@ input:checked + .slider1:before {
     .kotaklogo {max-width: 100%;}
     .kotaklogo img {width: 50%;}
     .kotakbar {display: flex;}
+    .kotakabout .isiabout img{
+        margin-bottom: 25px;
+        width: 50%;
+    }
+    .text h1{
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
 }
