@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['login'])){
+        echo "<script>
+                alert('Access Denied, Please Login');
+                document.location.href = 'login.php';
+            </script>";
+    }
+
+    require 'config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

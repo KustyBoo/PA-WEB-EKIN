@@ -1,16 +1,16 @@
 <?php
-    session_start();
     
+    session_start();
+
     require "config.php";
 
     $failed = null;
 
-    if( isset($_POST['logbtn'])){
+    if(isset($_POST['logbtn'])){
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['psw']);
 
         $result = mysqli_query($conn,"SELECT * FROM akun WHERE username='$username' ");
-
 
         if(mysqli_num_rows($result) > 0){
             $data = mysqli_fetch_assoc($result);
