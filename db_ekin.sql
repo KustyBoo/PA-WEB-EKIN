@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2022 at 06:10 AM
+-- Generation Time: Nov 06, 2022 at 06:23 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -41,7 +41,8 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`id_akun`, `username`, `email`, `password`, `tipe`) VALUES
 (1, 'Admin', 'Admin@gmail.com', '$2y$10$6TMgz3KBcleCUsPHBjaA8OxnJwdnARI0oCps8ZgDOLA6uG/KJyGG6', 'admin'),
-(2, 'Jarwodd', 'jarwo@gmail.com', '$2y$10$SZHSSD1Ars1Mu5.rP5UcvuOuqQZb3j4brBDtQjWIEtt7rX9Rf4v7m', 'user');
+(2, 'Jarwodd', 'jarwo@gmail.com', '$2y$10$SZHSSD1Ars1Mu5.rP5UcvuOuqQZb3j4brBDtQjWIEtt7rX9Rf4v7m', 'user'),
+(3, 'plix', 'plix@gmail.com', '$2y$10$yTDX00BzXOLp48bdpsZxHexz8Hy45EAdFQ5yU33N8hen.ffIP/Bea', 'user');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +62,7 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id_akun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_akun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

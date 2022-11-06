@@ -37,7 +37,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "icon" href = "logo_web.png">
+    <link rel = "icon" href = "gambar/logo_web.png">
     <link rel="stylesheet" href="style.css">
     <style>
         <?php include "style.css" ?>
@@ -48,8 +48,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKIN</title>
 </head>
-<body>
-    <div class="form-log" id="log-form">
+
+    <body>
+
+        <div class="kotaknav">
+            <div class="kotaklogo">
+                <a href="index.php"><img src="gambar/logo_web.png" alt="logo_web"></a>
+            </div>
+            <div class="nav">
+                <a href="index.php">HOME</a>
+                <a href="index.php#aboutus">ABOUT US</a>
+                <a href="index.php#contactus">CONTACT</a>
+                <div class="nightmode1">
+                    <div class="theme-switch-wrapper1">
+                        <label class="theme-switch1" for="checkbox1">
+                            <input type="checkbox" id="checkbox1" onclick="document.location.reload(true)"/>
+                            <div class="slider1 round1"></div>
+                        </label>
+                    </div>  
+                </div>
+            </div>
+            <div class="searchbar">
+                <form action="">
+                    <input type="text" name="search" value="" placeholder="Search">
+                </form>
+            </div>
+            <div class="nightmode">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" onclick="document.location.reload(true)"/> 
+                        <div class="slider round"></div>
+                    </label>
+                </div>  
+            </div>
+            <div class="kotakbar">
+                <a href="javascript:void(0);" class="icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="form-log" id="log-form">
             <form class="form-input" action="" method="POST">  
                 <div class="form-header">
                     <h2>LOGIN</h2>
@@ -64,17 +103,40 @@
                     <br>
                     <input type="password" placeholder="Password" name="psw">
                 </div>
-                <p style="color:red">
-                    <?php
-                        echo $failed;
-                     ?>
-                </p>
-                <br>
+                <div class="form-invalid">
+                    <b>
+                    <p style="color:red">
+                        <?php
+                            echo $failed;
+                            ?>
+                    </p>
+                    </b>
+                </div>
                 <div class="form-tombol">
                     <button type="submit" class="tombol1" name="logbtn">LOGIN</button>
-                    <button class="tombol" onclick="clslogin()">CLOSE</button>
+                </div>
+                <div class="form-register">
+                    <a href="register.php">Create Account?</a>
                 </div>
             </form> 
         </div>
-</body>
+
+        <div class="footer-basic">
+            <footer>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="index.php">Home</a></li>
+                    <li class="list-inline-item"><a href="index.php#aboutus">About</a></li>
+                    <li class="list-inline-item"><a href="index.php#contact">Contact</a></li>
+                </ul>
+                <p class="copyright">EKIN © 2022</p>
+            </footer>
+        </div>
+
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+
+        <script src="javascript.js"></script>
+    
+    </body>
+
 </html>

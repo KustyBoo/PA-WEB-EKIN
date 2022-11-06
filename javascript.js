@@ -14,6 +14,7 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 const toggleSwitch1 = document.querySelector('.theme-switch1 input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 var img = document.getElementById('gambarkonten').src;
+var img1 = document.getElementById('gambarkonten1').src;
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
@@ -21,9 +22,11 @@ if (currentTheme) {
         toggleSwitch.checked = true;
         toggleSwitch1.checked = true;
         if(toggleSwitch.checked === true || toggleSwitch1.checked === true){
-            document.getElementById('gambarkonten').src  = 'konten2.png';
+            document.getElementById('gambarkonten').src  = 'gambar/konten2.png';
+            document.getElementById('gambarkonten1').src  = 'gambar/logo_web_2.png';
         }else{
-            document.getElementById('gambarkonten').src  = 'konten3.png';
+            document.getElementById('gambarkonten').src  = 'gambar/konten3.png';
+            document.getElementById('gambarkonten1').src  = 'gambar/logo_web.png';
         }
     }
 }
@@ -41,12 +44,3 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 toggleSwitch1.addEventListener('change', switchTheme, false);
-
-// save posisi scroll refresh
-document.addEventListener("DOMContentLoaded", function (event) {
-    var scrollpos = localStorage.getItem("scrollpos");
-    if (scrollpos) window.scrollTo(0, scrollpos);
-});
-    window.onscroll = function (e) {
-    localStorage.setItem("scrollpos", window.scrollY);
-};

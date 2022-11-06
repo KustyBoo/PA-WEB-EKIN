@@ -52,37 +52,50 @@ body{
 
 .kotakabout{
     width: 100%;
-    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
+    padding-top: 7%;
+    padding-bottom: 12%;
+    color: var(--warna-tulisan);
+}
+
+.kotakabout .isiabout a{
+    justify-content: space-evenly;
+    display: flex;
 }
 
 .kotakabout .isiabout img{
     height: auto;
-    width: 600px;
-    max-width: 100%;
+    width: 100%;
+    align-items: center;
 }
 
 .textabout{
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
+    color: var(--warna-tulisan);
 }
 
 .textabout h1{
-    color: white;
+    color: var(--warna-tulisan);
     font-size: 85px;
-    margin-bottom: 20px;
     text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
-.textabout h5{
-    color: white;
+.textabout h3{
+    color: var(--warna-tulisan);
     font-size: 25px;
-    margin-bottom: 25px;
     text-transform: capitalize;
     letter-spacing: 2px;
+}
+
+.textabout p{
+    color: var(--warna-tulisan);
 }
 
 .text p{
@@ -94,27 +107,27 @@ body{
 }
 
 .isiabout{
-    width: 1280px;
-    max-width: 95%;
-    margin: auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    color: var(--warna-tulisan);
 }
 
 .contactus{
+    width: 100%;
+    left: 0;
+    right: 0;
     position: relative;
-    padding: 50px 100px;
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("bgacc.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("gambar/bgacc.jpg");
     background-position: center;
     background-size: cover;
-    background-repeat: none;
 }
 
 .contactus .isicontact{
@@ -125,13 +138,14 @@ body{
 .contactus .isicontact h2{
     font-size: 40px;
     font-weight: 450;
-    color: var(--warna-tulisan);
+    color: white;
 }
 
 .contactus .isicontact p{
     font-size: 25px;
     font-weight: 250;
-    color: var(--warna-tulisan);
+    padding: 15px   ;
+    color: white;
 }
 
 .containercontact{
@@ -139,7 +153,6 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 30px;
 }
 
 .containercontact .contactInfo{
@@ -166,14 +179,14 @@ body{
 .containercontact .contactInfo .box .text{
     margin-left: 20px;
     font-size: 15px;
-    color: var(--warna-tulisan);
+    color: white;
     display: flex;
     flex-direction: column;
     font-weight: 250;
 }
 
 .containercontact .contactInfo .box .text h3{
-    color: var(--warna-tulisan);
+    color: white;
     font-weight: 300;
 }
 
@@ -244,6 +257,12 @@ body{
     border: 0;
 }
 
+.hidden-log{
+    visibility: hidden;
+    padding-top: 3px;
+    padding-bottom: 11px;
+}
+
 .login:hover{
     opacity: 0.6;
     cursor: pointer;
@@ -267,22 +286,22 @@ body{
 }
 
 .form-log{
-    position: fixed;
-    top: 0;
     left: 0;
+    bottom: 50%;
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: rgba(0,0,0,0.5);
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
     align-items: center;
-    flex-direction: column;
+    padding-top: 8.5%;
+    padding-bottom: 4%;
+    color: var(--warna-tulisan);
 }
 
 .form-log input{
     width: 100%;
-    color: black;
+    color: var(--warna-bg);
 }
 
 .form-input{
@@ -290,8 +309,9 @@ body{
     max-width: 330px;
     padding: 30px 30px;
     padding-bottom: 40px;
-    background-color: #0f0f0f;
-    border: 5px solid white;
+    background-color: var(--warna-seken);
+    border: 5px solid var(--warna-tulisan);
+    color : var(--warna-tulisan);
 }
 
 .form-tombol{
@@ -301,27 +321,72 @@ body{
     justify-content: space-around;
 }
 
+.form-tombol label b{
+    color: var(--warna-tulisan);
+}
+
+.form-tombol input{
+    background-color: var(--warna-tulisan);
+    color: var(--warna-seken);
+}
+
+.form-invalid{
+    width: 100%;
+    padding: 0px;
+}
+
+.form-invalid p{
+    padding-left: 5px;
+}
+
+.form-register{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.form-register a{
+    color: var(--warna-tulisan);
+    text-decoration: none;
+}
+
+.form-register a:hover{
+    opacity: 0.8;
+}
+
+.form-register p{
+    color: var(--warna-tulisan);
+}
+
 .form-header{
     width: 100%;
     padding: 5px;
     text-align: center;
     justify-content: space-around;
+    color: var(--warna-tulisan);
+}
+
+.form-header h2{
+    color: var(--warna-tulisan);
 }
 
 .tombol{
     width: 100%;
-    background-color: white;
-    color: red;
+    background-color: var(--warna-tulisan);
     padding: 2px;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
 }
 
+.tombol a{
+    text-decoration: none;
+    color: red;
+}
+
 .tombol1{
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: var(--warna-tulisan);
+    color: var(--warna-bg);
     padding: 2px;
     text-align: center;
     font-weight: bold;
@@ -390,9 +455,9 @@ body{
 
 .kotaksign{
     width: 100%;
-    padding: 20%;
-    padding-bottom: 50px;
+    padding: 15%;
     padding-top: 6px;
+    padding-bottom: 10px;
     align-items: center;
     justify-content: space-around;
 }
@@ -401,7 +466,6 @@ body{
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 50px; 
 }
 
 .gambar1{
@@ -416,13 +480,14 @@ body{
 }
 
 .footer-basic {
-    padding: 40px;
+    margin-top: auto;
+    left: 0;
+    width: 100%;
     background-color: black;
     color: white;
+    text-align: center;
+    padding: 40px;
     position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
 }   
 
 .footer-basic ul {
@@ -572,18 +637,34 @@ input:checked + .slider1:before {
     --warna-tulisan : white;
     --warna-bg : #0f0f0f;
     --copyright : #aaa;
+    --warna-seken : black;
 }
 
 [data-theme="light"] {
     --warna-tulisan : black;
     --warna-bg : white;
     --copyright : white;
+    --warna-seken : white;
+}
+
+@media screen and (max-width: 1225px) {
+    .kotakabout{
+        margin: auto;
+        padding-top: 0%;
+    }
+    .form-log{
+        padding-top: 12.5%;
+        padding-bottom: 9%;
+    }
+    .textabout h1{font-size: 65px}  
+    .kotakabout .isiabout img{width: 60%;}
 }
 
 @media screen and (max-width: 760px) {
     .content2{font-size: 20px;}
     .kotakfilo{font-size: 20px;}
-    #login{ display: block;}    
+    #login{ display: block;}
+    .hidden-log {visibility:visible;}    
     .nav { display: none;}
     .nightmode {display: none;}
     .nightmode1 {display: flex;}
@@ -594,18 +675,45 @@ input:checked + .slider1:before {
         top: 63px;
         flex-direction: column;
         position: absolute;
-        padding: 5px;
+        padding: 10px;
     }
     .login {display: none;}
     .login {position: relative;}
     .kotaklogo {max-width: 100%;}
     .kotaklogo img {width: 50%;}
     .kotakbar {display: flex;}
-    .kotakabout{
-        width: 100%;
-        height: auto;
-        padding: 70px 0px;
+    .form-log{
+        padding-top: 16.5%;
+        padding-bottom: 13%;
+    }  
+    .textabout h1{font-size: 25px}  
+    .textabout h3{font-size: 20px}  
+    .kotakabout .isiabout img{width: 70%;}
+    .contactus .isicontact h2{font-size: 30px;}
+    .contactus .isicontact p{font-size: 18px;}
+    .contactus{background-size: cover;}
+}
+
+@media screen and (max-width: 680px){
+    .containercontact {
+        justify-content:center;
+        display: flex;
     }
+    .containercontact p{font-size: 15px;}
+    .containercontact .contactInfo .box{
+        display: block;
+    }
+    .containercontact .contactInfo .box .text{
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .textabout h1{font-size: 22px}  
+    .textabout h3{font-size: 15px}  
+    .kotakabout .isiabout img{width: 70%;}
+    .contactus{width: 100%;}
 }
 
 @media screen and (max-width: 460px) {
@@ -629,18 +737,28 @@ input:checked + .slider1:before {
     .kotaklogo {max-width: 100%;}
     .kotaklogo img {width: 50%;}
     .kotakbar {display: flex;}
-    .kotakabout .isiabout img{
-        margin-bottom: 35px;
-        width: 50%;
-    }
+    .kotakabout .isiabout img{width: 90%;}
     .text h1{
         font-size: 50px;
         margin-bottom: 25px;
     }
+    .form-log{
+        padding-top: 25.5%;
+        padding-bottom: 13%;
+    }  
+    .kotakabout{text-align: center;}
+    .kotakabout p{font-size: 12px;}
+    .containercontact {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    }
+    .textabout h1{font-size: 18px}  
+    .textabout h3{font-size: 14px}  
 }
 
 @media screen and (max-width: 345px) {
-    .content1{padding-top: 20%;}
+    .content1{padding-top: 30%;}
     .content2{font-size: 20px;}
     .kotakfilo{font-size: 20px;}    
     .nav { display: none;}
@@ -660,12 +778,19 @@ input:checked + .slider1:before {
     .kotaklogo {max-width: 100%;}
     .kotaklogo img {width: 50%;}
     .kotakbar {display: flex;}
-    .kotakabout .isiabout img{
-        margin-bottom: 25px;
-        width: 50%;
-    }
+    .kotakabout .isiabout img{width: 60%;}
     .text h1{
         font-size: 40px;
         margin-bottom: 25px;
+    }
+    .form-log{
+        padding-top: 25.5%;
+        padding-bottom: 16%;
+    }  
+}
+
+@media screen and (max-width: 344px){
+    .form-log{
+        padding-top: 50%;
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel = "icon" href = "logo_web.png">
+        <link rel = "icon" href = "gambar/logo_web.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
@@ -13,12 +13,15 @@
     <body>
         <div class="kotaknav">
             <div class="kotaklogo">
-                <a href="#"><img src="logo_web.png" alt="logo_web"></a>
+                <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
             </div>
             <div class="nav">
                 <a href="#">HOME</a>
                 <a href="#aboutus">ABOUT US</a>
-                <a href="#">CONTACT</a>
+                <a href="#contactus">CONTACT</a>
+                <div class="hidden-log">
+                    <a href="login.php">LOGIN</a>
+                </div>
                 <div class="nightmode1">
                     <div class="theme-switch-wrapper1">
                         <label class="theme-switch1" for="checkbox1">
@@ -50,8 +53,9 @@
                 </a>
             </div>
         </div>
+
         <div class="content1">
-            <a href="#"><img src="konten3.png" width="100%" height="50%" id="gambarkonten"></a>
+            <a href="#"><img src="gambar/konten3.png" width="100%" height="50%" id="gambarkonten"></a>
         </div>
         <br>
         <div class="content2">
@@ -73,11 +77,12 @@
             Wanna See More?
         </div>
         <div class="kotaksign">
-            <a href="register.php"><img src="signup.png" width="100%"></a>
+            <a href="register.php"><img src="gambar/signup.png" width="100%"></a>
         </div>
+
         <section id = "aboutus" class = "kotakabout">
             <div class="isiabout">
-                <img src="logo_web.png">
+                <a href="#"><img src="gambar/logo_web.png" id="gambarkonten1"></a>
                 <div class = "textabout">
                     <h1>About Us</h1>
                     <h3>EKIN</h3>
@@ -87,7 +92,8 @@
                 </div>
             </div>
         </section>
-        <section class = "contactus" id="contact">
+
+        <section class = "contactus" id="contactus">
             <div class = "isicontact">
                 <h2>Contact Us</h2>
                 <p>Thank you for visiting our website. You can interact with us via:</p>
@@ -108,7 +114,6 @@
                             <p>0541-2234045</p>
                         </div>
                     </div>
-                </div>
                     <div class = "box">
                         <div class = "icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                         <div class = "text">
@@ -119,12 +124,13 @@
                 </div>
             </div>
         </section>
-        <div class="footer-basic satu-footer-basic">
+        
+        <div class="footer-basic">
             <footer>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="#">Home</a></li>
                     <li class="list-inline-item"><a href="#aboutus">About</a></li>
-                    <li class="list-inline-item"><a href="#">Contact</a></li>
+                    <li class="list-inline-item"><a href="#contact">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>
