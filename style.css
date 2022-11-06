@@ -306,12 +306,62 @@ body{
 
 .form-input{
     width: 100%;
-    max-width: 330px;
+    max-width: 350px;
     padding: 30px 30px;
     padding-bottom: 40px;
     background-color: var(--warna-seken);
     border: 5px solid var(--warna-tulisan);
     color : var(--warna-tulisan);
+}
+
+.form-input1{
+    width: 100%;
+    max-width: 550px;
+    padding: 30px 30px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    color : var(--warna-tulisan);
+}
+
+.form-input1 input{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.form-tombol1{
+    margin: auto;
+    width: 100%;
+    max-width: 550px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-tombol1 input{
+    background-color: var(--warna-tulisan);
+    color: var(--warna-seken);
+    height: 35px;
+}
+
+.form-tombol2{
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    padding: 15px;
+}
+
+.form-tombol2 input{
+    height: 35%;
+    text-decoration: none;
+}
+
+.form-batas{
+    width: 100%;
 }
 
 .form-tombol{
@@ -369,6 +419,15 @@ body{
     color: var(--warna-tulisan);
 }
 
+.form-feed{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .tombol{
     width: 100%;
     background-color: var(--warna-tulisan);
@@ -391,6 +450,29 @@ body{
     text-align: center;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+}
+
+.tombol2{
+    width: 60%;
+    height: 30%;
+    background-color: var(--warna-seken);
+    color: var(--warna-tulisan);
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--warna-tulisan);
+    outline: none;
+}
+
+.tombol2:focus{
+    border: 2px solid var(--warna-tulisan);
+    outline: none;
+}
+
+.tombol2:hover{
+    opacity: 0.7;
 }
 
 .tombol:hover{
@@ -433,7 +515,7 @@ body{
 .content2{
     width: 100%;
     color: var(--warna-tulisan);
-    justify-content: center;
+    text-align: left;
     padding: 10px 40px;
     font-size: 30px;
 }
@@ -443,6 +525,33 @@ body{
     justify-content: center;
     width: 100%;
     padding: 5px 35px;
+}
+
+.content4{
+    width: 100%;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+}
+
+.content5{
+    width: 100%;
+    color: var(--warna-tulisan);
+    text-align: center;
+    padding: 10px 40px;
+    font-size: 30px;
+}
+
+.gambar2{
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 5px 5px;
+}
+
+.gambar2:hover{
+    opacity: 0.7;
 }
 
 .kotakfilo{
@@ -714,6 +823,11 @@ input:checked + .slider1:before {
     .textabout h3{font-size: 15px}  
     .kotakabout .isiabout img{width: 70%;}
     .contactus{width: 100%;}
+    .form-input1{
+        padding: 70px 70px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 460px) {

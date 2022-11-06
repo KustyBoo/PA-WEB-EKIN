@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     require "config.php";
 
     $failed = null;
@@ -92,7 +94,7 @@
             <form class="form-input" action="" method="POST">  
                 <div class="form-header">
                     <h2>LOGIN</h2>
-                </div>
+                </div>  
                 <div class="form-tombol">
                     <label for="username"><b>USERNAME</b></label>
                     <br>
@@ -134,6 +136,8 @@
 
         <div id="gambarkonten"><img src=""></div>
         <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>
+        <div id="gambarkonten3"><img src=""></div>
 
         <script src="javascript.js"></script>
     
