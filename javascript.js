@@ -32,12 +32,14 @@ if (currentTheme) {
             document.getElementById('gambarkonten2').src  = 'gambar/top1.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat1.png';
             document.getElementById('gambarkonten4').src  = 'gambar/more1.png';
+            document.getElementById('gambaradmin1').src  = 'gambar/bgadmin2.png';
         }else{
             document.getElementById('gambarkonten').src  = 'gambar/konten3.png';
             document.getElementById('gambarkonten1').src  = 'gambar/logo_web.png';
             document.getElementById('gambarkonten2').src  = 'gambar/top.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat.png';
             document.getElementById('gambarkonten4').src  = 'gambar/more.png';
+            document.getElementById('gambaradmin1').src  = 'gambar/bgadmin1.png';
         }
     }
 }
