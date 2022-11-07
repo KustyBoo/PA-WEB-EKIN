@@ -55,3 +55,12 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 toggleSwitch1.addEventListener('change', switchTheme, false);
+
+// save scroll bar
+document.addEventListener("DOMContentLoaded", function (event) {
+    var scrollpos = localStorage.getItem("scrollpos");
+    if (scrollpos) window.scrollTo(0, scrollpos);
+});
+window.onscroll = function (e) {
+localStorage.setItem("scrollpos", window.scrollY);
+};

@@ -158,7 +158,7 @@
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="index.php">Home</a></li>
                     <li class="list-inline-item"><a href="index.php#aboutus">About</a></li>
-                    <li class="list-inline-item"><a href="index.php#contact">Contact</a></li>
+                    <li class="list-inline-item"><a href="index.php#contactus">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>
