@@ -80,6 +80,11 @@
             <a href="register.php"><img src="gambar/signup.png" width="100%"></a>
         </div>
 
+        <div class="content4">
+            <a href="#"><img src="gambar/more.png" width="100%" height="50%" id="gambarkonten4"></a>
+        </div>
+        <br>
+
         <section id = "aboutus" class = "kotakabout">
             <div class="isiabout">
                 <a href="#"><img src="gambar/logo_web.png" id="gambarkonten1"></a>

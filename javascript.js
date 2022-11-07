@@ -13,10 +13,13 @@ kotak.addEventListener('click', function(){
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const toggleSwitch1 = document.querySelector('.theme-switch1 input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
+
+// Ganti gambar automatis tergantung light/dark mode
 var img = document.getElementById('gambarkonten').src;
 var img1 = document.getElementById('gambarkonten1').src;
 var img2 = document.getElementById('gambarkonten2').src;
 var img3 = document.getElementById('gambarkonten3').src;
+var img4 = document.getElementById('gambarkonten4').src;
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
@@ -28,11 +31,13 @@ if (currentTheme) {
             document.getElementById('gambarkonten1').src  = 'gambar/logo_web_2.png';
             document.getElementById('gambarkonten2').src  = 'gambar/top1.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat1.png';
+            document.getElementById('gambarkonten4').src  = 'gambar/more1.png';
         }else{
             document.getElementById('gambarkonten').src  = 'gambar/konten3.png';
             document.getElementById('gambarkonten1').src  = 'gambar/logo_web.png';
             document.getElementById('gambarkonten2').src  = 'gambar/top.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat.png';
+            document.getElementById('gambarkonten4').src  = 'gambar/more.png';
         }
     }
 }
