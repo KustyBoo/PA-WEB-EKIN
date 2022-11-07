@@ -77,6 +77,7 @@
             </div>
             <div class="nav">
                 <a href="index.php">HOME</a>
+                <a href="admin.php">ADMIN MENU</a>
                 <div class="nightmode1">
                     <div class="theme-switch-wrapper1">
                         <label class="theme-switch1" for="checkbox1">
@@ -106,8 +107,12 @@
             </div>
         </div>
 
-        <div class="form-log" id="log-form">
-            <form class="form-input" action="" method="POST">  
+        <div class="content1">
+            <a href="#"><img src="gambar/bgadmin2.png" id="gambaradmin1" width="100%" height="50%" id="gambarkonten"></a>
+        </div>
+
+        <div class="form-log2" id="log-form">
+            <form class="form-input2" action="" method="POST">  
                 <div class="form-header">
                     <h2>ADD SHOES REVIEWS</h2>
                 </div>  
@@ -134,7 +139,7 @@
                 <div class="form-tombol">
                     <label for="review_sepatu"><b>Review Sepatu</b></label>
                     <br>
-                    <input type="text" placeholder="Review" name="review_sepatu">
+                    <textarea placeholder="Write Review" name="review_sepatu"></textarea>
                 </div>
                 <div class="form-tombol">
                     <label for="tanggal_rilis"><b>Tanggal Rilis</b></label>
@@ -171,7 +176,6 @@
                 <p class="copyright">EKIN © 2022</p>
             </footer>
         </div>
-
         <script src="javascript.js"></script>
         
         </body>
