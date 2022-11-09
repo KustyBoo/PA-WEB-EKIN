@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2022 at 08:15 PM
+-- Generation Time: Nov 09, 2022 at 06:13 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -60,11 +60,31 @@ CREATE TABLE `gambar` (
 --
 
 INSERT INTO `gambar` (`id_gambar`, `id_review`, `gambar_sepatu`) VALUES
-(72, 36, 'jazz.jpg'),
-(73, 36, 'jeep.jpg'),
-(74, 36, 'avanza.png'),
-(75, 36, 'BRV.jpg'),
-(76, 36, 'images-10-5.jpeg');
+(112, 44, 'pico1.webp'),
+(113, 44, 'pico2.webp'),
+(114, 44, 'pico3.webp'),
+(115, 44, 'pico4.webp'),
+(116, 44, 'pico5.webp'),
+(117, 45, 'af1.webp'),
+(118, 45, 'af2.webp'),
+(119, 45, 'af3.webp'),
+(120, 45, 'af4.webp'),
+(121, 45, 'af5.webp'),
+(122, 46, 'waff1.webp'),
+(123, 46, 'waff2.webp'),
+(124, 46, 'waff3.webp'),
+(125, 46, 'waff4.webp'),
+(126, 46, 'waff5.webp'),
+(127, 47, 'pega1.webp'),
+(128, 47, 'pega2.webp'),
+(129, 47, 'pega3.webp'),
+(130, 47, 'pega4.webp'),
+(131, 47, 'pega5.webp'),
+(132, 48, 'lem1.webp'),
+(133, 48, 'lem2.webp'),
+(134, 48, 'lem3.webp'),
+(135, 48, 'lem4.webp'),
+(136, 48, 'lem5.webp');
 
 -- --------------------------------------------------------
 
@@ -87,7 +107,11 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`id_review`, `nama_sepatu`, `jenis_sepatu`, `warna_sepatu`, `rating_sepatu`, `review_sepatu`, `tanggal_rilis`) VALUES
-(36, 'tes2', 'tes2', 'tes2', 5, 'tes2', '2022-11-07');
+(44, 'Nike Pico 5 Lil', 'Trainer', 'Orange-White', 7, 'Follow the trail of pawprints left by your little one when they rock the Nike Pico 5. The latest release specially made for little ones is already familiar with the world of sneakers. With colors and paw parts that will surely attract them to wear it. Slip them on and let your child imagine they can run as fast as a fox when they go out to play.', '2021-07-05'),
+(45, 'Nike Air Force 1 &#039;07', 'Air Force', 'Triple White', 9, 'The radiance lives on in the Nike Air Force 1 &#039;07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine. This best seller made only for the best. with its white color which is certainly suitable to be combined with various colors of clothing on the body. wear the best shoes for the best display.', '2008-05-01'),
+(46, 'Nike Waffle One SE', 'Waffle ', 'Blue-White-Cream', 8, 'Bringing a new look to the iconic Waffle franchise, we&#039;ve balanced everything you love most about heritage Nike running with fresh innovations. Why waffle? because we can see from the mix of colors that pile up like a waffle layer. And of course you will feel the same exact thing when you use this, just like your happiness and joy when eating a waffle. A new franchise that you must have now.', '2022-11-09'),
+(47, 'Nike Air Zoom Pegasus 39 Shield', 'Zoom/Trainer', 'Black-Brown-Cream', 7, 'A water-repellent finish helps keep you dry while a cozy fleece-like feel on the inside helps keep your feet warm for nasty-weather runs. Rugged traction and 2 Zoom Air units provide grip and soft cushioning, so you can power through the elements. A shoe that can protect your feet like a shield and can give you the impression of a Pegasus flying in the sky. because the weight of the shoes is quite light on the feet will give a light impression on your feet when carrying these shoes running.', '2022-04-28'),
+(48, 'Nike Air Jordan 1 Low Lemonade', 'Jordan Low', 'Yellow-Lime-White', 8, 'Always in, always fresh. The Air Jordan 1 Low sets you up with a piece of Jordan history and heritage that&#039;s comfortable all day. Choose your colours, then step out in the iconic profile that&#039;s built with a high-end mix of materials and encapsulated Air in the heel. With their yellow color that will give a fresh impression to you the user just like you eat a slice of lemon. aAunique release of Air Jordan 1 low which is certainly made for those of you who want to look different than the others. For those of you who want to have shoes that are different from your friends, we can recommend these shoes to you.', '2022-07-08');
 
 --
 -- Indexes for dumped tables
@@ -126,13 +150,13 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Constraints for dumped tables
