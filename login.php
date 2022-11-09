@@ -17,10 +17,10 @@
             $psw = $data['password'];
             if (password_verify($password, $psw)){
                 if ($data['tipe'] == 'admin'){
-                    $_SESSION['login'] = true;
+                    $_SESSION['admin'] = true;
                     header("Location: admin.php");
                 }else {
-                    $_SESSION['login'] = true;
+                    $_SESSION['user'] = true;
                     header("Location: user.php");
                 }
             } else{
@@ -128,7 +128,7 @@
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="index.php">Home</a></li>
                     <li class="list-inline-item"><a href="index.php#aboutus">About</a></li>
-                    <li class="list-inline-item"><a href="index.php#contact">Contact</a></li>
+                    <li class="list-inline-item"><a href="index.php#contactus">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>
@@ -139,6 +139,7 @@
         <div id="gambarkonten2"><img src=""></div>
         <div id="gambarkonten3"><img src=""></div>
         <div id="gambarkonten4"><img src=""></div>
+        <div id="gambaradmin1"><img src=""></div>
 
         <script src="javascript.js"></script>
     

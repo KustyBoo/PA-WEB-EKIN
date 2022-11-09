@@ -78,28 +78,28 @@
 ?>
 
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel = "icon" href = "gambar/logo_web.png">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        <?php include "style.css" ?>
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKIN | ADMIN</title>
-</head>
-    <body class="member">
+    <head>
+        <link rel="icon" href="gambar/logo_web.png">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            <?php include "style.css" ?>
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EKIN | ADMIN</title>
+    </head>
+    <body>
         <div class="kotaknav">
             <div class="kotaklogo">
-                <a href="index.php"><img src="gambar/logo_web.png" alt="logo_web"></a>
+                <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
             </div>
             <div class="nav">
-                <a href="index.php">HOME</a>
-                <a href="admin.php">ADMIN MENU</a>
+                <a href="admin.php">REVIEW DATA</a>
+                <a href="#">FEEDBACK USER</a>
                 <div class="nightmode1">
                     <div class="theme-switch-wrapper1">
                         <label class="theme-switch1" for="checkbox1">
@@ -113,6 +113,9 @@
                 <form action="">
                     <input type="text" name="search" value="" placeholder="Search">
                 </form>
+            </div>
+            <div class="login">
+                <a href="logout.php" class="login">LOGOUT</a>
             </div>
             <div class="nightmode">
                 <div class="theme-switch-wrapper">
@@ -130,13 +133,13 @@
         </div>
 
         <div class="content1">
-            <a href="#"><img src="gambar/bgadmin2.png" id="gambaradmin1" width="100%" height="50%" id="gambarkonten"></a>
+            <a href="#"><img src="gambar/bgadmin2.png" id="gambaradmin1" width="100%" height="50%"></a>
         </div>
 
-        <div class="form-log2" id="log-form" >
+        <div class="form-log2" id="log-form">
             <form class="form-input2" action="" method="POST" enctype="multipart/form-data">  
                 <div class="form-header">
-                    <h2>ADD SHOES REVIEWS</h2>
+                    <h2>ADD REVIEW</h2>
                 </div>  
                 <div class="form-tombol">
                     <label for="nama_sepatu"><b>Nama Sepatu</b></label>
@@ -151,7 +154,7 @@
                 <div class="form-tombol">
                     <label for="warna_sepatu"><b>Warna Sepatu</b></label>
                     <br>
-                    <input type="text" name="warna" required><br><br>
+                    <input type="text" name="warna" required>
                 </div>
                 <div class="form-tombol">
                     <label for="rating_sepatu"><b>Rating Sepatu</b></label>
@@ -173,8 +176,12 @@
                     <br>
                     <input type="file" accept="image/*" name="img[]" multiple required>
                 </div>
-                <div class="form-tombol">
-                <button type="submit" name="submit" >SUBMIT REVIEW</button>
+                <br>
+                <div class="form-tombol1">
+                    <button type="submit" class="tombol2" name="submit" >SUBMIT REVIEW</button>
+                </div>
+                <div class="form-register">
+                    <a href="admin.php">CANCEL</a>
                 </div>
             </form> 
         </div>
@@ -182,13 +189,20 @@
         <div class="footer-basic">
             <footer>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="index.php">Home</a></li>
-                    <li class="list-inline-item"><a href="index.php#aboutus">About</a></li>
-                    <li class="list-inline-item"><a href="index.php#contact">Contact</a></li>
+                    <li class="list-inline-item"><a href="#">Home</a></li>
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="#">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>
         </div>
+
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>
+        <div id="gambarkonten3"><img src=""></div>
+        <div id="gambarkonten4"><img src=""></div>
+
         <script src="javascript.js"></script>
         
         </body>

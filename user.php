@@ -2,7 +2,7 @@
 
     session_start();
 
-    if(!isset($_SESSION['login'])){
+    if(!isset($_SESSION['user'])){
         echo "<script>
                 alert('Access Denied, Please Login');
                 document.location.href = 'login.php';
@@ -91,8 +91,8 @@
         </div>
         <br>
 
-        <div class="content4">
-            <a href="#"><img src="gambar/top.png" width="100%" height="50%" id="gambarkonten2"></a>
+        <div class="content4" id="top">
+            <a href="#top"><img src="gambar/top.png" width="100%" height="50%" id="gambarkonten2"></a>
         </div>
         <br>
 
@@ -110,8 +110,8 @@
         </div>
         <br>
 
-        <div class="content4">
-            <a href="#"><img src="gambar/wat.png" width="100%" height="50%" id="gambarkonten3"></a>
+        <div class="content4" id="feed">
+            <a href="#feed"><img src="gambar/wat.png" width="100%" height="50%" id="gambarkonten3"></a>
         </div>
         <br>
 
@@ -139,11 +139,11 @@
         </div>
 
         <div class="content4">
-            <a href="#"><img src="gambar/more.png" width="100%" height="50%" id="gambarkonten4"></a>
+            <a href="#aboutus"><img src="gambar/more.png" width="100%" height="50%" id="gambarkonten4"></a>
         </div>
         <br>
 
-        <section id = "aboutus" class = "kotakabout">
+        <section class = "kotakabout"  id="aboutus">
             <div class="isiabout">
                 <a href="#"><img src="gambar/logo_web.png" id="gambarkonten1"></a>
                 <div class = "textabout">
@@ -198,6 +198,8 @@
                 <p class="copyright">EKIN © 2022</p>
             </footer>
         </div>
+
+        <div id="gambaradmin1"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

@@ -135,7 +135,7 @@
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="#">Home</a></li>
                     <li class="list-inline-item"><a href="#aboutus">About</a></li>
-                    <li class="list-inline-item"><a href="#contact">Contact</a></li>
+                    <li class="list-inline-item"><a href="#contactus">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>
@@ -143,6 +143,7 @@
 
         <div id="gambarkonten2"><img src=""></div>
         <div id="gambarkonten3"><img src=""></div>
+        <div id="gambaradmin1"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

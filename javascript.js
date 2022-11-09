@@ -20,6 +20,7 @@ var img1 = document.getElementById('gambarkonten1').src;
 var img2 = document.getElementById('gambarkonten2').src;
 var img3 = document.getElementById('gambarkonten3').src;
 var img4 = document.getElementById('gambarkonten4').src;
+var img5 = document.getElementById('gambaradmin1').src;
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
@@ -32,14 +33,14 @@ if (currentTheme) {
             document.getElementById('gambarkonten2').src  = 'gambar/top1.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat1.png';
             document.getElementById('gambarkonten4').src  = 'gambar/more1.png';
-            document.getElementById('gambaradmin1').src  = 'gambar/bgadmin2.png';
+            document.getElementById('gambaradmin1').src  = 'gambar/bgadmin1.png';
         }else{
             document.getElementById('gambarkonten').src  = 'gambar/konten3.png';
             document.getElementById('gambarkonten1').src  = 'gambar/logo_web.png';
             document.getElementById('gambarkonten2').src  = 'gambar/top.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat.png';
             document.getElementById('gambarkonten4').src  = 'gambar/more.png';
-            document.getElementById('gambaradmin1').src  = 'gambar/bgadmin1.png';
+            document.getElementById('gambaradmin1').src  = 'gambar/bgadmin2.png';
         }
     }
 }
@@ -58,11 +59,23 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 toggleSwitch1.addEventListener('change', switchTheme, false);
 
-// save scroll bar
-document.addEventListener("DOMContentLoaded", function (event) {
-    var scrollpos = localStorage.getItem("scrollpos");
-    if (scrollpos) window.scrollTo(0, scrollpos);
-});
-window.onscroll = function (e) {
-localStorage.setItem("scrollpos", window.scrollY);
-};
+
+
+// image slide
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
