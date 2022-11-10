@@ -68,7 +68,7 @@
         }else {
             echo "
             <script> 
-                alert ('Tolong Upload 5 Gambar ');
+                alert ('Please Upload 5 Images');
                 
             </script>";
         }

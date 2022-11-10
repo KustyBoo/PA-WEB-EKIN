@@ -11,6 +11,22 @@
 
     require 'config.php';
 
+    $newest= "SELECT * FROM review JOIN gambar ON review.id_review = gambar.id_review GROUP BY review.id_review ORDER BY review.id_review DESC LIMIT 3";
+
+    $get_newest = mysqli_query($conn, $newest);
+
+    while($row = mysqli_fetch_assoc($get_newest)){
+        $sepatu_n[] = $row;
+    }
+
+    $b_rating = "SELECT * FROM review JOIN gambar ON review.id_review = gambar.id_review GROUP BY review.id_review ORDER BY review.rating_sepatu DESC,review.tanggal_rilis DESC LIMIT 2";
+
+    $get_rate = mysqli_query($conn, $b_rating);
+
+    while($row = mysqli_fetch_assoc($get_rate)){
+        $sepatu_r[] = $row;
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +86,7 @@
         </div>
 
         <div class="content1">
-            <a href="#"><img src="gambar/konten3.png" width="100%" height="50%" id="gambarkonten"></a>
+            <img src="gambar/konten3.png" width="100%" height="50%" id="gambarkonten">
         </div>
         <br>
 
@@ -80,16 +96,18 @@
 
         <div class="content3">
             <div class="gambar1">
-                <a href="#"><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_647,c_limit/9688463f-8011-4283-9a83-bb42b035e02a/nike-just-do-it.png" width="100%"></a>
+                <a href="review_page.php?id_review=<?php echo $sepatu_n[0]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_n[0]['gambar_sepatu']; ?>" alt=""></a>
             </div>
             <div class="gambar1">
-                <a href="#"><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_647,c_limit/a6a8c148-dab2-4cbb-9d4c-67fc8237a8fa/nike-just-do-it.png" width="100%"></a>
+                <a href="review_page.php?id_review=<?php echo $sepatu_n[1]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_n[1]['gambar_sepatu']; ?>" alt=""></a>
             </div>
             <div class="gambar1">
-                <a href="#"><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_647,c_limit/d91e8135-6430-4074-b870-fef440dfefb8/nike-just-do-it.png" width="100%"></a>
+            <a href="review_page.php?id_review=<?php echo $sepatu_n[2]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_n[2]['gambar_sepatu']; ?>" alt=""></a>
             </div>
         </div>
-        <br>
+        <div class="kotakfilo">
+            <a href="more.php">See More...</a>
+        </div>
 
         <div class="content4" id="top">
             <a href="#top"><img src="gambar/top.png" width="100%" height="50%" id="gambarkonten2"></a>
@@ -102,10 +120,10 @@
 
         <div class="content3">
             <div class="gambar2">
-                <a href="#"><img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f094af40-f82f-4fb9-a246-e031bf6fc411/air-force-1-07-shoe-NMmm1B.png" width="100%"></a>
+                <a href="review_page.php?id_review=<?php echo $sepatu_r[0]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_r[0]['gambar_sepatu']; ?>" alt=""></a>
             </div>
             <div class="gambar2">
-                <a href="#"><img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5557469e-3338-4ddc-92eb-fac05511d57c/air-jordan-1-low-shoe-459b4T.png" width="100%"></a>
+                <a href="review_page.php?id_review=<?php echo $sepatu_r[1]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_r[1]['gambar_sepatu']; ?>" alt=""></a>
             </div>
         </div>
         <br>

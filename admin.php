@@ -1,4 +1,5 @@
 <?php 
+
     session_start();
 
     if(!isset($_SESSION['admin'])){
@@ -86,7 +87,7 @@
             <div class="content2">
                 Data Review
             </div>
-            <table>
+            <table class="tabel-admin">
                 <tr>
                     <th height=50px>ID</th>
                     <th>NAMA</th>

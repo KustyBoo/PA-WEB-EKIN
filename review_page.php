@@ -1,5 +1,23 @@
 <?php 
 
+    session_start();
+
+    if(!isset($_SESSION['user'])){
+        if(!isset($_SESSION['admin'])){
+            echo "<script>
+                alert('Access Denied, Please Login');
+                document.location.href = 'login.php';
+            </script>";
+        }
+    } else if(!isset($_SESSION['admin'])){
+        if(!isset($_SESSION['user'])){
+            echo "<script>
+                alert('Access Denied, Please Login');
+                document.location.href = 'login.php';
+            </script>";
+        }
+    }
+
     require "config.php";
 
     $id_rev = $_GET["id_review"];
@@ -39,47 +57,93 @@
         <title>EKIN | ADMIN</title> 
     </head>
     <body>
-        <div class="kotaknav">
-            <div class="kotaklogo">
-                <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
-            </div>
-            <div class="nav">
-                <a href="admin.php">DATA REVIEW</a>
-                <a href="#">FEEDBACK USER</a>
-                <div class="hidden-log">
-                    <a href="logout.php">LOGOUT</a>
+        <?php if(isset($_SESSION['admin'])){ ?>
+            <div class="kotaknav">
+                <div class="kotaklogo">
+                    <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
                 </div>
-                <div class="nightmode1">
-                    <div class="theme-switch-wrapper1">
-                        <label class="theme-switch1" for="checkbox1">
-                            <input type="checkbox" id="checkbox1" onclick="document.location.reload(true)"/>
-                            <div class="slider1 round1"></div>
+                <div class="nav">
+                    <a href="admin.php">DATA REVIEW</a>
+                    <a href="#">FEEDBACK USER</a>
+                    <div class="hidden-log">
+                        <a href="logout.php">LOGOUT</a>
+                    </div>
+                    <div class="nightmode1">
+                        <div class="theme-switch-wrapper1">
+                            <label class="theme-switch1" for="checkbox1">
+                                <input type="checkbox" id="checkbox1" onclick="document.location.reload(true)"/>
+                                <div class="slider1 round1"></div>
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+                <div class="searchbar">
+                    <form action="">
+                        <input type="text" name="search" value="" placeholder="Search">
+                    </form>
+                </div>
+                <div class="login">
+                    <a href="logout.php" class="login">LOGOUT</a>
+                </div>
+                <div class="nightmode">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" onclick="document.location.reload(true)"/> 
+                            <div class="slider round"></div>
                         </label>
                     </div>  
                 </div>
+                <div class="kotakbar">
+                    <a href="javascript:void(0);" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
             </div>
-            <div class="searchbar">
-                <form action="">
-                    <input type="text" name="search" value="" placeholder="Search">
-                </form>
+        <?php } ?>
+        <?php if(isset($_SESSION['user'])) { ?>
+            <div class="kotaknav">
+                <div class="kotaklogo">
+                    <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
+                </div>
+                <div class="nav">
+                    <a href="user.php">HOME</a>
+                    <a href="user.php#aboutus">ABOUT US</a>
+                    <a href="user.php#contactus">CONTACT</a>
+                    <div class="hidden-log">
+                        <a href="logout.php">LOGOUT</a>
+                    </div>
+                    <div class="nightmode1">
+                        <div class="theme-switch-wrapper1">
+                            <label class="theme-switch1" for="checkbox1">
+                                <input type="checkbox" id="checkbox1" onclick="document.location.reload(true)"/>
+                                <div class="slider1 round1"></div>
+                            </label>
+                        </div>  
+                    </div>
+                </div>
+                <div class="searchbar">
+                    <form action="">
+                        <input type="text" name="search" value="" placeholder="Search">
+                    </form>
+                </div>
+                <div class="login">
+                    <a href="logout.php" class="login">LOGOUT</a>
+                </div>
+                <div class="nightmode">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" onclick="document.location.reload(true)"/> 
+                            <div class="slider round"></div>
+                        </label>
+                    </div>  
+                </div>
+                <div class="kotakbar">
+                    <a href="javascript:void(0);" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
             </div>
-            <div class="login">
-                <a href="logout.php" class="login">LOGOUT</a>
-            </div>
-            <div class="nightmode">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" onclick="document.location.reload(true)"/> 
-                        <div class="slider round"></div>
-                    </label>
-                </div>  
-            </div>
-            <div class="kotakbar">
-                <a href="javascript:void(0);" class="icon">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
+        <?php } ?>
         <br>
         <br>
         <div class="kotak-luar">

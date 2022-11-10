@@ -87,7 +87,7 @@
             } else {
                 echo "
                     <script> 
-                        alert ('5 woy');
+                        alert ('Please Upload 5 Images');
                         document.location.href = 'update.php?id_review=$id_rev';
                     </script>";
             }

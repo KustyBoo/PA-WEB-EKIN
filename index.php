@@ -1,3 +1,25 @@
+<?php
+
+    require 'config.php';
+
+    $newest= "SELECT * FROM review JOIN gambar ON review.id_review = gambar.id_review GROUP BY review.id_review ORDER BY review.id_review DESC LIMIT 3";
+
+    $get_newest = mysqli_query($conn, $newest);
+
+    while($row = mysqli_fetch_assoc($get_newest)){
+        $sepatu_n[] = $row;
+    }
+
+    $b_rating = "SELECT * FROM review JOIN gambar ON review.id_review = gambar.id_review GROUP BY review.id_review ORDER BY review.rating_sepatu DESC,review.tanggal_rilis DESC LIMIT 2";
+
+    $get_rate = mysqli_query($conn, $b_rating);
+
+    while($row = mysqli_fetch_assoc($get_rate)){
+        $sepatu_r[] = $row;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,7 +35,7 @@
     <body>
         <div class="kotaknav">
             <div class="kotaklogo">
-                <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
+                <img src="gambar/logo_web.png" alt="logo_web">
             </div>
             <div class="nav">
                 <a href="#">HOME</a>
@@ -55,7 +77,7 @@
         </div>
 
         <div class="content1">
-            <a href="#"><img src="gambar/konten3.png" width="100%" height="50%" id="gambarkonten"></a>
+            <img src="gambar/konten3.png" width="100%" height="50%" id="gambarkonten">
         </div>
         <br>
         <div class="content2">
@@ -63,18 +85,18 @@
         </div>
         <div class="content3">
             <div class="gambar1">
-                <a href="#"><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_647,c_limit/9688463f-8011-4283-9a83-bb42b035e02a/nike-just-do-it.png" width="100%"></a>
+                <a href="review_page.php?id_review=<?php echo $sepatu_n[0]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_n[0]['gambar_sepatu']; ?>" alt=""></a>
             </div>
             <div class="gambar1">
-                <a href="#"><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_647,c_limit/a6a8c148-dab2-4cbb-9d4c-67fc8237a8fa/nike-just-do-it.png" width="100%"></a>
+                <a href="review_page.php?id_review=<?php echo $sepatu_n[1]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_n[1]['gambar_sepatu']; ?>" alt=""></a>
             </div>
             <div class="gambar1">
-                <a href="#"><img src="https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_647,c_limit/d91e8135-6430-4074-b870-fef440dfefb8/nike-just-do-it.png" width="100%"></a>
+            <a href="review_page.php?id_review=<?php echo $sepatu_n[2]['id_review']; ?>"><img width="100%" src="sepatu/<?php echo $sepatu_n[2]['gambar_sepatu']; ?>" alt=""></a>
             </div>
         </div>
         <br>
         <div class="kotakfilo">
-            Wanna See More?
+            <a href="more.php">Wanna See More?</a>
         </div>
         <div class="kotaksign">
             <a href="register.php"><img src="gambar/signup.png" width="100%"></a>
