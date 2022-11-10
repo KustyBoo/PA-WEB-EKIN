@@ -83,7 +83,7 @@
         </div>
 
         <div class="content1">
-            <img src="gambar/feedback1.png" width="100%" height="50%" id="gambarfeedback">
+            <img src="gambar/feedback2.png" width="100%" height="50%" id="gambarfeedback">
         </div>
 
         <div class="tabel-data">
