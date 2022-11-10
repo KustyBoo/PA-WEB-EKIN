@@ -27,6 +27,41 @@
         $sepatu_r[] = $row;
     }
     
+    if( isset($_POST['submit'])){
+        $nama_spt = htmlspecialchars($_POST['nama']);
+        $brand_spt = htmlspecialchars($_POST['brand']);
+        $tipe_spt = htmlspecialchars($_POST['tipe']);
+        $warna_spt = htmlspecialchars($_POST['warna']);
+        $email = htmlspecialchars($_POST['email']);
+
+        $input = "INSERT INTO feedback VALUES ('','$nama_spt','$brand_spt','$tipe_spt','$warna_spt','$email')";
+
+        $hasil_input = mysqli_query($conn, $input);
+
+        if ($hasil_input){
+            // $query = "SELECT * FROM feedback WHERE nama_sepatu = '$nama_spt'";
+
+            // $result_get_id = mysqli_query($conn,$query);
+
+            // if($result_get_id){
+            //     while($row = mysqli_fetch_assoc($result_get_id)){
+            //         $fk = $row['id_review'];
+            //     }
+                echo "
+                    <script> 
+                        alert ('Thank You for Your Feedback');
+                        document.location.href = 'user.php';
+                    </script>";
+        } else {
+            echo "
+            <script> 
+                alert ('Sorry but We Failed to Place your Feedack');
+                document.location.href = 'user.php';
+            </script>";  
+            }
+        
+    }
+
 ?>
 
 <!DOCTYPE html>
