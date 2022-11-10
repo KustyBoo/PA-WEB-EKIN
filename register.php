@@ -60,7 +60,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKIN</title>
+    <title>EKIN | Register Page</title>
 </head>
     <body>
 
@@ -170,6 +170,8 @@
         <div id="gambarkonten3"><img src=""></div>
         <div id="gambarkonten4"><img src=""></div>
         <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

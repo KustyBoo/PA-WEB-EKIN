@@ -48,7 +48,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKIN</title>
+    <title>EKIN | Login Page</title>
 </head>
 
     <body>
@@ -71,8 +71,22 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="">
-                    <input type="text" name="search" value="" placeholder="Search">
+                <form action="" methode = "GET">
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
+                                </div>
+                            </td>
+                            <td>
+                                <button type = "submit" class = "btn btn-secondary" name="search">
+                                    <i class = "fa fa-search"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="nightmode">
@@ -140,6 +154,8 @@
         <div id="gambarkonten3"><img src=""></div>
         <div id="gambarkonten4"><img src=""></div>
         <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
     

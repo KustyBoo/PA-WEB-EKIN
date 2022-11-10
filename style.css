@@ -240,13 +240,18 @@ body{
     color: black;
 }
 
-.searchbar :hover{
+.searchbar button :hover{
     border-radius: 25px;
     opacity: 0.8;
 }
 
-.searchbar :focus{
+.searchbar button :focus{
     border-radius: none;
+    
+}
+
+.searchbar button{
+    background-color: black;
 }
 
 .login{

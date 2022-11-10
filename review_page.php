@@ -54,7 +54,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EKIN | ADMIN</title> 
+        <title>EKIN | Review Page</title> 
     </head>
     <body>
         <?php if(isset($_SESSION['admin'])){ ?>
@@ -122,9 +122,23 @@
                     </div>
                 </div>
                 <div class="searchbar">
-                    <form action="">
-                        <input type="text" name="search" value="" placeholder="Search">
-                    </form>
+                    <form action="" methode = "GET">
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
+                                </div>
+                            </td>
+                            <td>
+                                <button type = "submit" class = "btn btn-secondary" name="search">
+                                    <i class = "fa fa-search"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
+                </form>
                 </div>
                 <div class="login">
                     <a href="logout.php" class="login">LOGOUT</a>
@@ -206,6 +220,8 @@
         <div id="gambarkonten3"><img src=""></div>
         <div id="gambarkonten4"><img src=""></div>
         <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
 

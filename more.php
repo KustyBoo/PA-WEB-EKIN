@@ -27,6 +27,26 @@
         $sepatu_r[] = $row;
     }
 
+    if(isset($_GET['search'])){
+        $sepatu_n = [];
+        $keyword = $_GET['keyword'];
+        $result = mysqli_query($conn, "SELECT * FROM review JOIN gambar 
+        ON review.id_review = gambar.id_review 
+        GROUP BY review.id_review
+        HAVING review.nama_sepatu LIKE '%$keyword%' OR review.jenis_sepatu LIKE '%$keyword'");
+        while($row = mysqli_fetch_assoc($result)){
+            $sepatu_n[] = $row;
+        }
+    }
+    else{
+        $sepatu_n = [];
+        $result = mysqli_query($conn, "SELECT * FROM review JOIN gambar 
+        ON review.id_review = gambar.id_review GROUP BY review.id_review");
+        while($row = mysqli_fetch_assoc($result)){
+            $sepatu_n[] = $row;
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -63,8 +83,22 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="">
-                    <input type="text" name="search" value="" placeholder="Search">
+                <form action="" methode = "GET">
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
+                                </div>
+                            </td>
+                            <td>
+                                <button type = "submit" class = "btn btn-secondary" name="search">
+                                    <i class = "fa fa-search"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="login">
@@ -86,7 +120,7 @@
         </div>
 
         <div class="content1">
-            <img src="gambar/konten3.png" width="100%" height="50%" id="gambarkonten">
+            <img src="gambar/kontenmore1.png" width="100%" height="50%" id="gambarmore">
         </div>
         <br>
 
@@ -121,6 +155,8 @@
         <div id="gambarkonten3"><img src=""></div>
         <div id="gambarkonten4"><img src=""></div>
         <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

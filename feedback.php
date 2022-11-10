@@ -1,31 +1,12 @@
-<?php 
-    session_start();
-
-    if(!isset($_SESSION['admin'])){
-        echo "<script>
-                alert('Access Denied, Please Login');
-                document.location.href = 'login.php';
-            </script>";
-    }
-
+<?php
     require "config.php";
-    $review = [];
-    if(isset($_GET['search'])){
-        $keyword = $_GET['keyword'];
-        $result = mysqli_query($conn, "SELECT * FROM review JOIN gambar 
-        ON review.id_review = gambar.id_review 
-        GROUP BY review.id_review
-        HAVING review.nama_sepatu LIKE '%$keyword%' OR review.jenis_sepatu LIKE '%$keyword'");
-        while($row = mysqli_fetch_assoc($result)){
-            $review[] = $row;
-        }
-    }
-    else{
-        $result = mysqli_query($conn, "SELECT * FROM review JOIN gambar 
-        ON review.id_review = gambar.id_review GROUP BY review.id_review");
-        while($row = mysqli_fetch_assoc($result)){
-            $review[] = $row;
-        }
+
+    $query = "SELECT * FROM feedback";
+    $result = mysqli_query($conn, $query);
+
+    $feedback = [];
+    while ($row = mysqli_fetch_assoc($result)){
+        $feedback[] = $row; 
     }
 
 ?>
@@ -42,15 +23,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKIN | ADMIN</title>
+    <title>EKIN | User Feedback</title>
 </head>
     <body>
         <div class="kotaknav">
             <div class="kotaklogo">
-                <a href="#"><img src="gambar/logo_web.png" alt="logo_web"></a>
+                <a href="admin.php"><img src="gambar/logo_web.png" alt="logo_web"></a>
             </div>
             <div class="nav">
-                <a href="#">DATA REVIEW</a>
+                <a href="admin.php">DATA REVIEW</a>
                 <a href="feedback.php">FEEDBACK USER</a>
                 <div class="hidden-log">
                     <a href="logout.php">LOGOUT</a>
@@ -65,7 +46,7 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="" method = "GET">
+                <form action="" methode = "GET">
                 <table>
                     <tr>
                         <td>
@@ -74,7 +55,7 @@
                             </div>
                         </td>
                         <td>
-                            <button type="submit" class = "btn btn-secondary" name="search">
+                            <button class = "btn btn-secondary" name="search">
                                 <i class = "fa fa-search"></i>
                             </button>
                         </td>
@@ -101,43 +82,34 @@
             </div>
         </div>
 
+        <div class="content1">
+            <img src="gambar/feedback1.png" width="100%" height="50%" id="gambarfeedback">
+        </div>
+
         <div class="tabel-data">
             <div class="content2">
-                Data Review
+                User Feedback
             </div>
             <table class="tabel-admin">
                 <tr>
                     <th height=50px>ID</th>
-                    <th>NAMA</th>
-                    <th>JENIS</th>
-                    <th>RATING</th>
-                    <th>GAMBAR</th>
-                    <th>PROSES</th>
+                    <th>NAMA SEPATU</th>
+                    <th>BRAND SEPATU</th>
+                    <th>TIPE SEPATU</th>
+                    <th>WARNA SEPATU</th>
+                    <th>EMAIL USER</th>
                 </tr>
-                <?php $i = 1; foreach($review as $rev): ?>
+                <?php $i = 1; foreach($feedback as $fb): ?>
                 <tr>
                     <td><?php echo $i; ?></td>
-                    <td><?php echo $rev['nama_sepatu']; ?></td>
-                    <td><?php echo $rev['jenis_sepatu'];?></td>
-                    <td><?php echo $rev['rating_sepatu']; ?></td>
-                    <td><img width="100px" src="sepatu/<?php echo $rev['gambar_sepatu']; ?>" alt=""></td>
-                    <td>
-                        <a href="review_page.php?id_review=<?php echo $rev['id_review']; ?>">
-                            <i class="fa fa-eye"></i>
-                        </a>
-                        <a href="update.php?id_review=<?php echo $rev['id_review'];?>">
-                            <i class="fa fa-pencil-square-o"></i>
-                        </a>
-                        <a href="delete.php?id_review=<?php echo $rev['id_review'];?>">
-                            <i class="fa fa-trash"></i>
-                        </a>
-                    </td>
+                    <td><?php echo $fb['nama_sepatu']; ?></td>
+                    <td><?php echo $fb['brand_sepatu'];?></td>
+                    <td><?php echo $fb['tipe_sepatu']; ?></td>
+                    <td><?php echo $fb['warna_sepatu']; ?></td>
+                    <td><?php echo $fb['email']; ?></td>
                 </tr>
                 <?php $i++; endforeach; ?>
             </table><br>
-            <div class="tabel-tambah">
-                <a href="insert_review.php">+ Tambah Data</a>
-            </div>
         </div>
         
         <div class="footer-basic">
