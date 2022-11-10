@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 06:13 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Nov 10, 2022 at 09:11 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,6 +42,30 @@ CREATE TABLE `akun` (
 INSERT INTO `akun` (`id_akun`, `username`, `email`, `password`, `tipe`) VALUES
 (1, 'Admin', 'Admin@gmail.com', '$2y$10$6TMgz3KBcleCUsPHBjaA8OxnJwdnARI0oCps8ZgDOLA6uG/KJyGG6', 'admin'),
 (2, 'Jarwodd', 'jarwo@gmail.com', '$2y$10$SZHSSD1Ars1Mu5.rP5UcvuOuqQZb3j4brBDtQjWIEtt7rX9Rf4v7m', 'user');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id_feedback` int(11) NOT NULL,
+  `nama_sepatu` varchar(255) NOT NULL,
+  `brand_sepatu` varchar(255) NOT NULL,
+  `tipe_sepatu` varchar(255) NOT NULL,
+  `warna_sepatu` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id_feedback`, `nama_sepatu`, `brand_sepatu`, `tipe_sepatu`, `warna_sepatu`, `email`) VALUES
+(1, 'Air Jordan 4 Retro', 'Nike', 'Jordan 4', 'Dark Blue', 'ihsangg@gmail.com'),
+(2, 'Air Jordan 1 UNC', 'Nike', 'Jordan 1 High', 'Red and White', 'nopal123@gmail.com'),
+(3, 'Converse Retro Chess', 'Converse', 'Retro', 'Black and White', 'hadieee@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -124,6 +148,12 @@ ALTER TABLE `akun`
   ADD PRIMARY KEY (`id_akun`);
 
 --
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id_feedback`);
+
+--
 -- Indexes for table `gambar`
 --
 ALTER TABLE `gambar`
@@ -145,6 +175,12 @@ ALTER TABLE `review`
 --
 ALTER TABLE `akun`
   MODIFY `id_akun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `gambar`
