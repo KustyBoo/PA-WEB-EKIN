@@ -1,12 +1,53 @@
 <?php
+    session_start();
+
+    if(!isset($_SESSION['admin'])){
+        echo "<script>
+                alert('Access Denied, Please Login');
+                document.location.href = 'login.php';
+            </script>";
+    }
+
     require "config.php";
 
-    $query = "SELECT * FROM feedback";
-    $result = mysqli_query($conn, $query);
+    $most = "SELECT COUNT(*) as jumlah,nama_sepatu 
+            FROM feedback
+            GROUP BY nama_sepatu
+            ORDER BY jumlah DESC LIMIT 1";
 
-    $feedback = [];
-    while ($row = mysqli_fetch_assoc($result)){
-        $feedback[] = $row; 
+    $get_most = mysqli_query($conn,$most);
+
+    $most_feed = mysqli_fetch_assoc($get_most);    
+
+    if(isset($_GET['search'])){
+        $feedback = [];
+        $keyword = $_GET['keyword'];
+        $result = mysqli_query($conn, "SELECT * FROM feedback 
+        HAVING nama_sepatu LIKE '%$keyword%' OR brand_sepatu LIKE '%$keyword'");
+        while($row = mysqli_fetch_assoc($result)){
+            $feedback[] = $row;
+        }
+
+        $panjang = 0;
+
+        foreach($feedback as $x) {
+            $panjang++;
+        }
+    }
+    else{
+        $query = "SELECT * FROM feedback";
+        $result = mysqli_query($conn, $query);
+
+        $feedback = [];
+        while ($row = mysqli_fetch_assoc($result)){
+            $feedback[] = $row; 
+        }
+
+        $panjang = 0;
+
+        foreach($feedback as $x) {
+            $panjang++;
+        }
     }
 
 ?>
@@ -61,7 +102,6 @@
                         </td>
                     </tr>
                 </table>
-                    <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="login">
@@ -86,6 +126,10 @@
             <img src="gambar/feedback2.png" width="100%" height="50%" id="gambarfeedback">
         </div>
 
+        <div>
+            <h2><?php $x=$most_feed['nama_sepatu']; echo"Most Requested : $x"; ?></h2>
+        </div>
+
         <div class="tabel-data">
             <div class="content2">
                 User Feedback
@@ -99,6 +143,7 @@
                     <th>WARNA SEPATU</th>
                     <th>EMAIL USER</th>
                 </tr>
+                <?php if($panjang != 0){ ?>
                 <?php $i = 1; foreach($feedback as $fb): ?>
                 <tr>
                     <td><?php echo $i; ?></td>
@@ -109,6 +154,9 @@
                     <td><?php echo $fb['email']; ?></td>
                 </tr>
                 <?php $i++; endforeach; ?>
+                <?php } else {?>
+                    <th colspan=6>Data Not Found</th>
+                <?php } ?>
             </table><br>
         </div>
         

@@ -27,6 +27,7 @@
         $sepatu_r[] = $row;
     }
 
+
     if(isset($_GET['search'])){
         $sepatu_n = [];
         $keyword = $_GET['keyword'];
@@ -37,6 +38,12 @@
         while($row = mysqli_fetch_assoc($result)){
             $sepatu_n[] = $row;
         }
+
+        $panjang = 0;
+
+        foreach($sepatu_n as $x) {
+            $panjang++;
+        }
     }
     else{
         $sepatu_n = [];
@@ -44,6 +51,11 @@
         ON review.id_review = gambar.id_review GROUP BY review.id_review");
         while($row = mysqli_fetch_assoc($result)){
             $sepatu_n[] = $row;
+        }
+        $panjang = 0;
+
+        foreach($sepatu_n as $x) {
+            $panjang++;
         }
     }
 
@@ -98,7 +110,6 @@
                             </td>
                         </tr>
                     </table>
-                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="login">
@@ -120,22 +131,26 @@
         </div>
 
         <div class="content1">
-            <img src="gambar/kontenmore1.png" width="100%" height="50%" id="gambarmore">
+            <img src="gambar/kontenmore2.png" width="100%" height="50%" id="gambarmore">
         </div>
         <br>
 
         <div class="content-semua">
-            <?php 
-            if(isset($sepatu_n)){
+        <?php 
+            if($panjang != 0){
+                
                 foreach($sepatu_n as $spt):
+                    $panjang++;
             ?>
                 <div class="gambar1-semua">
                     <a href="review_page.php?id_review=<?php echo $spt['id_review']; ?>"><img src="sepatu/<?php echo $spt['gambar_sepatu']; ?>" alt=""></a>
                 </div>
             <?php
                 endforeach;
-            }
+            } else {  
             ?>
+                <h2>Data No Found LAaa</h2>
+            <?php } ?>
         </div>
 
         <div class="footer-basic">

@@ -19,12 +19,22 @@
         while($row = mysqli_fetch_assoc($result)){
             $review[] = $row;
         }
+        $panjang = 0;
+
+        foreach($review as $x) {
+            $panjang++;
+        }
     }
     else{
         $result = mysqli_query($conn, "SELECT * FROM review JOIN gambar 
         ON review.id_review = gambar.id_review GROUP BY review.id_review");
         while($row = mysqli_fetch_assoc($result)){
             $review[] = $row;
+        }
+        $panjang = 0;
+
+        foreach($review as $x) {
+            $panjang++;
         }
     }
 
@@ -80,7 +90,6 @@
                         </td>
                     </tr>
                 </table>
-                    <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="login">
@@ -114,6 +123,7 @@
                     <th>GAMBAR</th>
                     <th>PROSES</th>
                 </tr>
+                <?php if($panjang != 0){ ?>
                 <?php $i = 1; foreach($review as $rev): ?>
                 <tr>
                     <td><?php echo $i; ?></td>
@@ -134,6 +144,9 @@
                     </td>
                 </tr>
                 <?php $i++; endforeach; ?>
+                <?php } else {?>
+                    <th colspan=6>Data Not Found</th>
+                <?php } ?>
             </table><br>
             <div class="tabel-tambah">
                 <a href="insert_review.php">+ Tambah Data</a>

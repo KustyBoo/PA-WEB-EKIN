@@ -9,6 +9,8 @@
             </script>";
     }
 
+    $username = $_SESSION['username'];
+
     require 'config.php';
 
     $newest= "SELECT * FROM review JOIN gambar ON review.id_review = gambar.id_review GROUP BY review.id_review ORDER BY review.id_review DESC LIMIT 3";
@@ -23,6 +25,10 @@
 
     $get_rate = mysqli_query($conn, $b_rating);
 
+    $get_akun = mysqli_query($conn ,"SELECT email FROM akun WHERE username = '$username'");
+
+    $get_email = mysqli_fetch_assoc($get_akun);
+
     while($row = mysqli_fetch_assoc($get_rate)){
         $sepatu_r[] = $row;
     }
@@ -32,21 +38,13 @@
         $brand_spt = htmlspecialchars($_POST['brand']);
         $tipe_spt = htmlspecialchars($_POST['tipe']);
         $warna_spt = htmlspecialchars($_POST['warna']);
-        $email = htmlspecialchars($_POST['email']);
+        $email = $get_email['email'];
 
         $input = "INSERT INTO feedback VALUES ('','$nama_spt','$brand_spt','$tipe_spt','$warna_spt','$email')";
 
         $hasil_input = mysqli_query($conn, $input);
 
         if ($hasil_input){
-            // $query = "SELECT * FROM feedback WHERE nama_sepatu = '$nama_spt'";
-
-            // $result_get_id = mysqli_query($conn,$query);
-
-            // if($result_get_id){
-            //     while($row = mysqli_fetch_assoc($result_get_id)){
-            //         $fk = $row['id_review'];
-            //     }
                 echo "
                     <script> 
                         alert ('Thank You for Your Feedback');
@@ -98,7 +96,7 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="" methode = "GET">
+                <form action="more.php" methode = "GET">
                     <table>
                         <tr>
                             <td>
@@ -113,7 +111,6 @@
                             </td>
                         </tr>
                     </table>
-                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="login">
@@ -196,9 +193,6 @@
                 <div class="form-tombol1">
                     <input type="text" placeholder="COLOR" name="warna" required>
                 </div>
-                <div class="form-tombol1">
-                    <input type="email" placeholder="EMAIL" name="email" required>
-                </div>
                 <div class="form-tombol2">
                     <button type="submit" class="tombol2" name="submit">SUBMIT</button>
                 </div>
@@ -267,6 +261,9 @@
         </div>
 
         <div id="gambaradmin1"><img src=""></div>
+
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

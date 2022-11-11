@@ -21,6 +21,7 @@
                     header("Location: admin.php");
                 }else {
                     $_SESSION['user'] = true;
+                    $_SESSION['username'] = $username;
                     header("Location: user.php");
                 }
             } else{
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="" methode = "GET">
+                <form action="more.php" methode = "GET">
                     <table>
                         <tr>
                             <td>
@@ -86,7 +87,6 @@
                             </td>
                         </tr>
                     </table>
-                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="nightmode">
