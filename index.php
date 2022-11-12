@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="" methode = "GET">
+                <form action="more.php" methode = "GET">
                     <table>
                         <tr>
                             <td>
@@ -69,7 +69,6 @@
                             </td>
                         </tr>
                     </table>
-                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
                 </form>
             </div>
             <div class="login">
@@ -120,7 +119,7 @@
             <a href="#"><img src="gambar/more.png" width="100%" height="50%" id="gambarkonten4"></a>
         </div>
         <br>
-
+        <br>
         <section id = "aboutus" class = "kotakabout">
             <div class="isiabout">
                 <a href="#"><img src="gambar/logo_web.png" id="gambarkonten1"></a>
@@ -177,9 +176,12 @@
             </footer>
         </div>
 
-        <div id="gambarkonten2"><img src=""></div>
-        <div id="gambarkonten3"><img src=""></div>
-        <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarkonten2" hidden><img src=""></div>
+        <div id="gambarkonten3" hidden><img src=""></div>
+        <div id="gambaradmin1" hidden><img src=""></div>
+        <div id="gambarfeedback" hidden><img src=""></div>
+        <div id="gambarmore" hidden><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

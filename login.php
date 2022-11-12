@@ -104,6 +104,12 @@
             </div>
         </div>
 
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>
+        <div id="gambarkonten3"><img src=""></div>
+        <div id="gambarkonten4"><img src=""></div>
+
         <div class="form-log" id="log-form">
             <form class="form-input" action="" method="POST">  
                 <div class="form-header">
@@ -137,6 +143,11 @@
             </form> 
         </div>
 
+        <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
+
         <div class="footer-basic">
             <footer>
                 <ul class="list-inline">
@@ -147,15 +158,6 @@
                 <p class="copyright">EKIN © 2022</p>
             </footer>
         </div>
-
-        <div id="gambarkonten"><img src=""></div>
-        <div id="gambarkonten1"><img src=""></div>
-        <div id="gambarkonten2"><img src=""></div>
-        <div id="gambarkonten3"><img src=""></div>
-        <div id="gambarkonten4"><img src=""></div>
-        <div id="gambaradmin1"><img src=""></div>
-        <div id="gambarfeedback"><img src=""></div>
-        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
     

@@ -131,27 +131,40 @@
         </div>
 
         <div class="content1">
-            <img src="gambar/kontenmore2.png" width="100%" height="50%" id="gambarmore">
+            <img src="gambar/kontenmore2.png" width="100%" height="100%" id="gambarmore">
         </div>
         <br>
-
-        <div class="content-semua">
+        
         <?php 
             if($panjang != 0){
-                
+                echo '<div class="content-semua">';
                 foreach($sepatu_n as $spt):
                     $panjang++;
             ?>
                 <div class="gambar1-semua">
                     <a href="review_page.php?id_review=<?php echo $spt['id_review']; ?>"><img src="sepatu/<?php echo $spt['gambar_sepatu']; ?>" alt=""></a>
+                    <div class="bawah-kiri">
+                        <?php echo $spt['nama_sepatu']; ?>
+                    </div>
                 </div>
             <?php
                 endforeach;
+                echo '</div>';
             } else {  
             ?>
-                <h2>Data No Found LAaa</h2>
+                <div class="kotak-notfound">
+                    <img src="gambar/find.png" width="100%" height="100%" alt="logo_web" id="gambarfind">
+                </div>
             <?php } ?>
-        </div>
+
+        <div id="gambarkonten" hidden><img src=""></div>
+        <div id="gambarkonten1" hidden><img src=""></div>
+        <div id="gambarkonten2" hidden><img src=""></div>
+        <div id="gambarkonten3" hidden><img src=""></div>
+        <div id="gambarkonten4" hidden><img src=""></div>
+        <div id="gambaradmin1" hidden><img src=""></div>
+        <div id="gambarfeedback" hidden><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
 
         <div class="footer-basic">
             <footer>
@@ -164,14 +177,7 @@
             </footer>
         </div>
 
-        <div id="gambarkonten"><img src=""></div>
-        <div id="gambarkonten1"><img src=""></div>
-        <div id="gambarkonten2"><img src=""></div>
-        <div id="gambarkonten3"><img src=""></div>
-        <div id="gambarkonten4"><img src=""></div>
-        <div id="gambaradmin1"><img src=""></div>
-        <div id="gambarfeedback"><img src=""></div>
-        <div id="gambarmore"><img src=""></div>
+        
 
         <script src="javascript.js"></script>
     </body>

@@ -85,8 +85,21 @@
                 </div>
             </div>
             <div class="searchbar">
-                <form action="">
-                    <input type="text" name="search" value="" placeholder="Search">
+                <form action="more.php" methode = "GET">
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
+                                </div>
+                            </td>
+                            <td>
+                                <button type = "submit" class = "btn btn-secondary" name="search">
+                                    <i class = "fa fa-search"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
                 </form>
             </div>
             <div class="login">
@@ -106,6 +119,11 @@
                 </a>
             </div>
         </div>
+
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>
+        <div id="gambarkonten3"><img src=""></div>
 
         <div class="form-log">
             <form class="form-input" action="" method="POST">
@@ -153,6 +171,12 @@
             </form>
         </div>
 
+        <div id="gambarkonten4"><img src=""></div>
+        <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
+
         <div class="footer-basic">
             <footer>
                 <ul class="list-inline">
@@ -163,15 +187,6 @@
                 <p class="copyright">EKIN © 2022</p>
             </footer>
         </div>
- 
-        <div id="gambarkonten"><img src=""></div>
-        <div id="gambarkonten1"><img src=""></div>
-        <div id="gambarkonten2"><img src=""></div>
-        <div id="gambarkonten3"><img src=""></div>
-        <div id="gambarkonten4"><img src=""></div>
-        <div id="gambaradmin1"><img src=""></div>
-        <div id="gambarfeedback"><img src=""></div>
-        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

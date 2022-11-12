@@ -88,20 +88,20 @@
             </div>
             <div class="searchbar">
                 <form action="" methode = "GET">
-                <table>
-                    <tr>
-                        <td>
-                            <div>
-                                <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
-                            </div>
-                        </td>
-                        <td>
-                            <button class = "btn btn-secondary" name="search">
-                                <i class = "fa fa-search"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
+                                </div>
+                            </td>
+                            <td>
+                                <button class = "btn btn-secondary" name="search">
+                                    <i class = "fa fa-search"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
                 </form>
             </div>
             <div class="login">
@@ -126,16 +126,16 @@
             <img src="gambar/feedback2.png" width="100%" height="50%" id="gambarfeedback">
         </div>
 
-        <div>
-            <h2><?php $x=$most_feed['nama_sepatu']; echo"Most Requested : $x"; ?></h2>
-        </div>
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>  
 
-        <div class="tabel-data">
-            <div class="content2">
-                User Feedback
-            </div>
-            <table class="tabel-admin">
+        <div class="tabel-data1">
+            <table class="tabel-admin1">
                 <tr>
+                    <div class="content2">
+                        <?php $x=$most_feed['nama_sepatu']; echo"Most Requested : $x"; ?>
+                    </div>
                     <th height=50px>ID</th>
                     <th>NAMA SEPATU</th>
                     <th>BRAND SEPATU</th>
@@ -157,28 +157,26 @@
                 <?php } else {?>
                     <th colspan=6>Data Not Found</th>
                 <?php } ?>
-            </table><br>
+            </table>
         </div>
         
-        <div class="footer-basic">
-            <footer>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Home</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="#">Contact</a></li>
-                </ul>
-                <p class="copyright">EKIN © 2022</p>
-            </footer>
-        </div>
-
-        <div id="gambarkonten"><img src=""></div>
-        <div id="gambarkonten1"><img src=""></div>
-        <div id="gambarkonten2"><img src=""></div>
         <div id="gambarkonten3"><img src=""></div>
         <div id="gambarkonten4"><img src=""></div>
         <div id="gambaradmin1"><img src=""></div>
         <div id="gambarfeedback"><img src=""></div>
         <div id="gambarmore"><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
+
+        <div class="footer-basic">
+            <footer>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="user.php">Home</a></li>
+                    <li class="list-inline-item"><a href="user.php#aboutus">About</a></li>
+                    <li class="list-inline-item"><a href="user.php#contactus">Contact</a></li>
+                </ul>
+                <p class="copyright">EKIN © 2022</p>
+            </footer>
+        </div>
 
         <script src="javascript.js"></script>
         

@@ -5,8 +5,11 @@
     scroll-behavior: smooth;
 }
 
-body{
+html, body{
+    position: relative;
     background-color: var(--warna-bg);
+    margin: 0;
+    padding: 0;
 }
 
 .kotaknav{
@@ -252,6 +255,7 @@ body{
 
 .searchbar button{
     background-color: black;
+    border: none;
 }
 
 .login{
@@ -570,6 +574,10 @@ body{
     font-size: 30px;
 }
 
+.content2 h2{
+    color: var(--warna-tulisan);
+}
+
 .content3{
     display: flex;
     width: 100%;
@@ -579,11 +587,12 @@ body{
 }
 
 .content-semua{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(5, minmax(250px, 1fr));
     width: 100%;
-    padding: 10px;
-    padding-right: 15px;
+    padding: 30px;
+    padding-bottom: 50px;
     margin:auto;
     align-items: center;
 }
@@ -625,6 +634,7 @@ body{
 
 .kotakfilo a{
     text-decoration: none;
+    color: var(--warna-tulisan);
 }
 
 .kotakfilo a:hover{
@@ -659,12 +669,28 @@ body{
     padding: 5px 5px;
 }
 
+.bawah-kiri{
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.kotak-notfound{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
 .gambar1-semua{
     width: 100%;
     height: 550px;
     align-items: center;
     justify-content: center;
     padding: 5px 5px;
+    position: relative;
 }
 
 .gambar1-semua:hover{
@@ -678,6 +704,7 @@ body{
 .footer-basic {
     margin-top: auto;
     left: 0;
+    right: 0;
     width: 100%;
     background-color: black;
     color: white;
@@ -847,10 +874,9 @@ input:checked + .slider1:before {
     margin: auto;
     justify-content: space-evenly;
     padding: 50px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    left: 0;
-    right: 0;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    overflow-x: auto;
 }
 
 .tabel-data a{
@@ -873,12 +899,46 @@ input:checked + .slider1:before {
     opacity: 0.5;
 }
 
+.tabel-data1{
+    max-width: 100%;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 20px;
+    padding-bottom: 5%;
+    overflow-x: auto;
+}
+
+.tabel-admin1{
+    width:100%;
+    background-color: var(--warna-tabel);
+    color: var(--warna-tulisan);
+    border-collapse: collapse;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.tabel-admin1 th {
+    font-size: 18px;
+    background-color: var(--warna-tulisan);
+    color: var(--warna-seken);
+}
+
+.tabel-admin1 td {
+    padding: 0.5625rem 0.625rem;
+    font-size: 0.875rem;
+    border-left: none;
+    color: var(--warna-tulisan);
+    border-bottom: 1px solid var(--warna-tulisan);
+}
+
 .tabel-admin {
 	width:100%;
     background-color: var(--warna-tabel);
     color: var(--warna-tulisan);
     border-collapse: collapse;
     text-align: center;
+    overflow-x: auto;
 }
 
 .tabel-admin a{
@@ -1056,6 +1116,7 @@ input:checked + .slider1:before {
     --copyright : white;
     --warna-seken : white;
     --warna-tabel : whitesmoke;
+    color-scheme: dark;
 }
 
 @media screen and (max-width: 1250px) {
@@ -1181,7 +1242,7 @@ input:checked + .slider1:before {
     }
     .form-log{
         padding-top: 25.5%;
-        padding-bottom: 13%;
+        padding-bottom: 25%;
     }  
     .kotakabout{text-align: center;}
     .kotakabout p{font-size: 12px;}
@@ -1193,6 +1254,24 @@ input:checked + .slider1:before {
     .textabout h1{font-size: 18px}  
     .textabout h3{font-size: 14px}  
     .kotak-review-gambar{width: 70%;}
+    .kotak-notfound{
+        display: flex;
+        margin-top: 25%;
+        margin-bottom: 37%;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .content1{padding-top: 30%;}
+    .responsive {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        top:95px;
+        flex-direction: column;
+        position: absolute;
+        padding: 5px;
+    }
 }
 
 @media screen and (max-width: 345px) {

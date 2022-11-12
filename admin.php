@@ -110,9 +110,14 @@
             </div>
         </div>
 
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>
+        <div id="gambarkonten3"><img src=""></div>
+
         <div class="tabel-data">
             <div class="content2">
-                Data Review
+                <h2>Data Review<h2>
             </div>
             <table class="tabel-admin">
                 <tr>
@@ -145,33 +150,33 @@
                 </tr>
                 <?php $i++; endforeach; ?>
                 <?php } else {?>
-                    <th colspan=6>Data Not Found</th>
+                    <td colspan=6>
+                        Data tidak tersedia
+                    </td>
                 <?php } ?>
             </table><br>
-            <div class="tabel-tambah">
-                <a href="insert_review.php">+ Tambah Data</a>
-            </div>
-        </div>
-        
-        <div class="footer-basic">
-            <footer>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Home</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="#">Contact</a></li>
-                </ul>
-                <p class="copyright">EKIN © 2022</p>
-            </footer>
         </div>
 
-        <div id="gambarkonten"><img src=""></div>
-        <div id="gambarkonten1"><img src=""></div>
-        <div id="gambarkonten2"><img src=""></div>
-        <div id="gambarkonten3"><img src=""></div>
+        <div class="tabel-tambah">
+            <a href="insert_review.php">+ Tambah Data</a>
+        </div>
+        
         <div id="gambarkonten4"><img src=""></div>
         <div id="gambaradmin1"><img src=""></div>
         <div id="gambarfeedback"><img src=""></div>
         <div id="gambarmore"><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
+
+        <div class="footer-basic">
+            <footer>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="user.php">Home</a></li>
+                    <li class="list-inline-item"><a href="user.php#aboutus">About</a></li>
+                    <li class="list-inline-item"><a href="user.php#contactus">Contact</a></li>
+                </ul>
+                <p class="copyright">EKIN © 2022</p>
+            </footer>
+        </div>
 
         <script src="javascript.js"></script>
         

@@ -226,12 +226,14 @@
             </form>
         </div>
 
+        <div id="gambarfind"><img src=""></div>
+
         <div class="footer-basic">
             <footer>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Home</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="#">Contact</a></li>
+                    <li class="list-inline-item"><a href="user.php">Home</a></li>
+                    <li class="list-inline-item"><a href="user.php#aboutus">About</a></li>
+                    <li class="list-inline-item"><a href="user.php#contactus">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>

@@ -186,6 +186,8 @@
             </form> 
         </div>
 
+        <div id="gambarfind"><img src=""></div>
+
         <div class="footer-basic">
             <footer>
                 <ul class="list-inline">

@@ -64,7 +64,7 @@
                 </div>
                 <div class="nav">
                     <a href="admin.php">DATA REVIEW</a>
-                    <a href="#">FEEDBACK USER</a>
+                    <a href="feedback.php">FEEDBACK USER</a>
                     <div class="hidden-log">
                         <a href="logout.php">LOGOUT</a>
                     </div>
@@ -78,8 +78,21 @@
                     </div>
                 </div>
                 <div class="searchbar">
-                    <form action="">
-                        <input type="text" name="search" value="" placeholder="Search">
+                    <form action="" methode = "GET">
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type = "text" name = "keyword" id = 'keyword' value="" placeholder="Search">
+                                </div>
+                            </td>
+                            <td>
+                                <button type = "submit" class = "btn btn-secondary" name="search">
+                                    <i class = "fa fa-search"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
                     </form>
                 </div>
                 <div class="login">
@@ -137,8 +150,7 @@
                             </td>
                         </tr>
                     </table>
-                        <!-- <input class = "fa fa-search" type="text" name="search" value="" placeholder="Search"> -->
-                </form>
+                    </form>
                 </div>
                 <div class="login">
                     <a href="logout.php" class="login">LOGOUT</a>
@@ -158,8 +170,13 @@
                 </div>
             </div>
         <?php } ?>
-        <br>
-        <br>
+
+        <div id="gambarkonten"><img src=""></div>
+        <div id="gambarkonten1"><img src=""></div>
+        <div id="gambarkonten2"><img src=""></div>
+        <div id="gambarkonten3"><img src=""></div>
+        <div id="gambarkonten4"><img src=""></div>
+
         <div class="kotak-luar">
             <div class="kotak-review-gambar">
                 <div class="kotak-img">
@@ -203,25 +220,22 @@
                 </div>
             </div>
         </div>
+
+        <div id="gambaradmin1"><img src=""></div>
+        <div id="gambarfeedback"><img src=""></div>
+        <div id="gambarmore"><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
+
         <div class="footer-basic">
             <footer>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Home</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="#">Contact</a></li>
+                    <li class="list-inline-item"><a href="user.php">Home</a></li>
+                    <li class="list-inline-item"><a href="user.php#aboutus">About</a></li>
+                    <li class="list-inline-item"><a href="user.php#contactus">Contact</a></li>
                 </ul>
                 <p class="copyright">EKIN © 2022</p>
             </footer>
         </div>
-
-        <div id="gambarkonten"><img src=""></div>
-        <div id="gambarkonten1"><img src=""></div>
-        <div id="gambarkonten2"><img src=""></div>
-        <div id="gambarkonten3"><img src=""></div>
-        <div id="gambarkonten4"><img src=""></div>
-        <div id="gambaradmin1"><img src=""></div>
-        <div id="gambarfeedback"><img src=""></div>
-        <div id="gambarmore"><img src=""></div>
 
         <script src="javascript.js"></script>
 

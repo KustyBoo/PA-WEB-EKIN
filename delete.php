@@ -30,7 +30,7 @@ if($result_img and $result_review and $result_get_img) {
         document.location.href = 'admin.php';
     </script>";
 }else {
-    mysqli_rollbak($conn);
+    mysqli_rollback($conn);
     echo "
     <script> 
         alert ('GAGAL to Delete Review');

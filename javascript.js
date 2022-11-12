@@ -22,7 +22,8 @@ var img3 = document.getElementById('gambarkonten3').src;
 var img4 = document.getElementById('gambarkonten4').src;
 var img5 = document.getElementById('gambaradmin1').src;
 var img6 = document.getElementById('gambarfeedback').src;
-var img6 = document.getElementById('gambarmore').src;
+var img7 = document.getElementById('gambarmore').src;
+var img8 = document.getElementById('gambarfind').src;
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
@@ -37,13 +38,17 @@ if (currentTheme) {
             document.getElementById('gambarkonten4').src  = 'gambar/more1.png';
             document.getElementById('gambaradmin1').src  = 'gambar/bgadmin1.png';
             document.getElementById('gambarfeedback').src  = 'gambar/feedback1.png';
-            document.getElementById('gambarmore').src  = 'gambar/kontenmore2.png';
+            document.getElementById('gambarmore').src  = 'gambar/kontenmore1.png';
+            document.getElementById('gambarfind').src  = 'gambar/find1.png';
         }else{
             document.getElementById('gambarkonten').src  = 'gambar/konten3.png';
             document.getElementById('gambarkonten1').src  = 'gambar/logo_web.png';
             document.getElementById('gambarkonten2').src  = 'gambar/top.png';
             document.getElementById('gambarkonten3').src  = 'gambar/wat.png';
             document.getElementById('gambarkonten4').src  = 'gambar/more.png';
+            document.getElementById('gambarfeedback').src  = 'gambar/feedback2.png';
+            document.getElementById('gambarmore').src  = 'gambar/kontenmore2.png';
+            document.getElementById('gambarfind').src  = 'gambar/find.png';
         }
     }
 }
@@ -62,9 +67,7 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 toggleSwitch1.addEventListener('change', switchTheme, false);
 
-
-
-// image slide
+// image slide kanan kiri
 var slideIndex = 1;
 showDivs(slideIndex);
 

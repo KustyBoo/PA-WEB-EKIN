@@ -261,9 +261,9 @@
         </div>
 
         <div id="gambaradmin1"><img src=""></div>
-
         <div id="gambarfeedback"><img src=""></div>
         <div id="gambarmore"><img src=""></div>
+        <div id="gambarfind"><img src=""></div>
 
         <script src="javascript.js"></script>
     </body>

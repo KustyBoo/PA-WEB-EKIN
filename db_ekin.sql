@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 09:11 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Nov 12, 2022 at 04:27 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,7 +65,8 @@ CREATE TABLE `feedback` (
 INSERT INTO `feedback` (`id_feedback`, `nama_sepatu`, `brand_sepatu`, `tipe_sepatu`, `warna_sepatu`, `email`) VALUES
 (1, 'Air Jordan 4 Retro', 'Nike', 'Jordan 4', 'Dark Blue', 'ihsangg@gmail.com'),
 (2, 'Air Jordan 1 UNC', 'Nike', 'Jordan 1 High', 'Red and White', 'nopal123@gmail.com'),
-(3, 'Converse Retro Chess', 'Converse', 'Retro', 'Black and White', 'hadieee@gmail.com');
+(3, 'Converse Retro Chess', 'Converse', 'Retro', 'Black and White', 'hadieee@gmail.com'),
+(4, 'ultraboost mocha', 'adidas', 'running', 'brown', 'jarwo@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -180,7 +181,7 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `gambar`
