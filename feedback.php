@@ -155,7 +155,9 @@
                 </tr>
                 <?php $i++; endforeach; ?>
                 <?php } else {?>
-                    <th colspan=6>Data Not Found</th>
+                    <td colspan=6>
+                        Data tidak tersedia
+                    </td>
                 <?php } ?>
             </table>
         </div>
