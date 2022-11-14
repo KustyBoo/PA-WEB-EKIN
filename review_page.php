@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="searchbar">
-                    <form action="" methode = "GET">
+                    <form action="admin.php" methode = "GET">
                     <table>
                         <tr>
                             <td>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="searchbar">
-                    <form action="" methode = "GET">
+                    <form action="more.php" methode = "GET">
                     <table>
                         <tr>
                             <td>
