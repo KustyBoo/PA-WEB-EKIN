@@ -1267,7 +1267,7 @@ input:checked + .slider1:before {
         width: 100%;
         background-color: black;
         display: flex;
-        top:63px;
+        top:95px;
         flex-direction: column;
         position: absolute;
         padding: 5px;
@@ -1285,7 +1285,7 @@ input:checked + .slider1:before {
         width: 100%;
         background-color: black;
         display: flex;
-        top:95px;
+        top:100px;
         flex-direction: column;
         position: absolute;
         padding: 5px;
